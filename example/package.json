@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint"
+  },
+  "author": "Kanmu, Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^1.1.0",
+    "eslint-config-kanmu": "file:..",
+    "eslint-plugin-react": "^3.2.2"
+  },
+  "private": true
+}

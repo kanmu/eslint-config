@@ -1,0 +1,34 @@
+{
+  "name": "eslint-config-kanmu",
+  "version": "0.0.0",
+  "description": "ESLint configurations for Kanmu.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "react.js",
+    "es5.js"
+  ],
+  "scripts": {
+    "test": "bash test.sh"
+  },
+  "dependencies": {
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.1.0"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Kanmu, Inc.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanmu/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kanmu/eslint-config/issues"
+  },
+  "homepage": "https://github.com/kanmu/eslint-config#readme"
+}
