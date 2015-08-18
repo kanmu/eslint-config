@@ -8,6 +8,13 @@ module.exports = extend(true, {}, base, {
 
   'rules': {
     /**
+     * Best Practices
+     */
+    // 不正な this 禁止
+    // http://eslint.org/docs/rules/no-invalid-this
+    'no-invalid-this': 0, // ES7 Property Initializers の関数をうまく判定できない
+
+    /**
      * React
      */
     // displayName属性有無
