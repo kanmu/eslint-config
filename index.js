@@ -339,6 +339,9 @@ module.exports = {
     // 配列括弧の空白スタイル
     // http://eslint.org/docs/rules/array-bracket-spacing
     'array-bracket-spacing': 2,
+    // 1行ブロック内の空白スタイル
+    // http://eslint.org/docs/rules/block-spacing
+    'block-spacing': 0,  // brace-style で 1 行ブロックを制限しているため不要
     // 波括弧の書き方
     // http://eslint.org/docs/rules/brace-style
     'brace-style': [2, '1tbs', {'allowSingleLine': false}],
@@ -505,6 +508,9 @@ module.exports = {
     // const への再代入禁止
     // http://eslint.org/docs/rules/no-const-assign
     'no-const-assign': 2,
+    // クラスメンバ名の重複禁止
+    // http://eslint.org/docs/rules/no-dupe-class-members
+    'no-dupe-class-members': 2,
     // コンストラクタ内 super の前の this 禁止
     // http://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 2,
@@ -514,6 +520,9 @@ module.exports = {
     // ES6 のオブジェクト省略表現
     // http://eslint.org/docs/rules/object-shorthand
     'object-shorthand': [2, 'always'],
+    // コールバックに arrow function の利用提案
+    // http://eslint.org/docs/rules/prefer-arrow-callback
+    'prefer-arrow-callback': 2,
     // const の利用提案
     // http://eslint.org/docs/rules/prefer-const
     'prefer-const': 2,
@@ -523,6 +532,9 @@ module.exports = {
     // Spread オペレータの利用提案
     // http://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 2,
+    // 文字列連結にテンプレートリテラルの利用提案
+    // http://eslint.org/docs/rules/prefer-template
+    'prefer-template': 2,
     // yield の必須化
     // http://eslint.org/docs/rules/require-yield
     'require-yield': 2,
