@@ -56,6 +56,9 @@ module.exports = extend(true, {}, base, {
     // const への再代入禁止
     // http://eslint.org/docs/rules/no-const-assign
     'no-const-assign': 0,
+    // クラスメンバ名の重複禁止
+    // http://eslint.org/docs/rules/no-dupe-class-members
+    'no-dupe-class-members': 0,
     // コンストラクタ内 super の前の this 禁止
     // http://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 0,
@@ -65,6 +68,9 @@ module.exports = extend(true, {}, base, {
     // ES6 のオブジェクト省略表現
     // http://eslint.org/docs/rules/object-shorthand
     'object-shorthand': 0,
+    // コールバックに arrow function の利用提案
+    // http://eslint.org/docs/rules/prefer-arrow-callback
+    'prefer-arrow-callback': 0,
     // const の利用提案
     // http://eslint.org/docs/rules/prefer-const
     'prefer-const': 0,
@@ -74,6 +80,9 @@ module.exports = extend(true, {}, base, {
     // Spread オペレータの利用提案
     // http://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 0,
+    // 文字列連結にテンプレートリテラルの利用提案
+    // http://eslint.org/docs/rules/prefer-template
+    'prefer-template': 0,
     // yield の必須化
     // http://eslint.org/docs/rules/require-yield
     'require-yield': 0
