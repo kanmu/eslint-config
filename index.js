@@ -239,6 +239,9 @@ module.exports = {
     // 不要な .call() / .apply() の禁止
     // http://eslint.org/docs/rules/no-useless-call
     'no-useless-call': 2,
+    // 不要な文字列連結の禁止
+    // http://eslint.org/docs/rules/no-useless-concat
+    'no-useless-concat': 2,
     // void 禁止
     // http://eslint.org/docs/rules/no-void
     'no-void': 2,
