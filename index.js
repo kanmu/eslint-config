@@ -306,7 +306,7 @@ module.exports = {
     'no-unused-vars': 2,
     // 定義前変数の使用禁止
     // http://eslint.org/docs/rules/no-use-before-define
-    'no-use-before-define': 2,
+    'no-use-before-define': [2, 'nofunc'],  // 関数の場合は hoisting 有効
 
     /**
      * Node.js
