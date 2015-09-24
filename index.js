@@ -106,7 +106,7 @@ module.exports = {
     'block-scoped-var': 0,
     // 複雑度
     // http://eslint.org/docs/rules/complexity
-    'complexity': [1, 3],
+    'complexity': [1, 8],  // テスタブル JavaScript には 10 以下が適切とある
     // 一貫性のある return 必須化
     // http://eslint.org/docs/rules/consistent-return
     'consistent-return': 2,
