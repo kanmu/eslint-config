@@ -23,18 +23,24 @@ module.exports = extend(true, {}, base, {
     // 暗黙の属性値 true の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
     'react/jsx-boolean-value': [2, 'always'], //
+    // 閉じタグの場所強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
+    'react/jsx-closing-bracket-location': [2, {location: 'tag-aligned'}],
     // 属性式内のスペーススタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
     'react/jsx-curly-spacing': [2, 'never', {'allowMultiline': true}],
+    // 属性のインデントスタイル
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+    'react/jsx-indent-props': [2, 2],
+    // 1行あたりの最大属性数
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
+    'react/jsx-max-props-per-line': [2, 2],
     // props の重複禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
     'react/jsx-no-duplicate-props': 2,
     // 未定義の React コンポーネントを使用禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
     'react/jsx-no-undef': 2,
-    // JSX 属性のクオートスタイル
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-quotes.md
-    'react/jsx-quotes': [2, 'double'],
     // propTypes の定義をアルファベット順に制限
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-prop-types.md
     'react/jsx-sort-prop-types': 2,
@@ -47,6 +53,9 @@ module.exports = extend(true, {}, base, {
     // JSX 内で使用中の変数への no-unused-vars 発動禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
     'react/jsx-uses-vars': 2,
+    // dangerouslySetInnerHTML の禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
+    'react/no-danger': 0,  // 使うときは覚悟を持って使う
     // componentDidMount 内での setState 禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
     'react/no-did-mount-set-state': [2, 'allow-in-func'],
@@ -56,6 +65,9 @@ module.exports = extend(true, {}, base, {
     // 1 ファイル内複数コンポーネント定義を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
     'react/no-multi-comp': 2,
+    // setState 禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
+    'react/no-set-state': 0,  // ストイックすぎる
     // 不適切な DOM 属性使用の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
     'react/no-unknown-property': 2,
@@ -65,6 +77,9 @@ module.exports = extend(true, {}, base, {
     // JSX スコープ内の React 定義を必須化
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
     'react/react-in-jsx-scope': 2,
+    // require で拡張子を強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
+    'react/require-extension': 0,
     // コンポーネントの不要な閉じタグを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
     'react/self-closing-comp': 2,
