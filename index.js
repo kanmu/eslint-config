@@ -556,7 +556,7 @@ module.exports = {
     'max-params': [1, 3],
     // 関数内の文の数
     // http://eslint.org/docs/rules/max-statements
-    'max-statements': [1, 12],
+    'max-statements': [1, 10],
     // ビット演算子禁止
     // http://eslint.org/docs/rules/no-bitwise
     'no-bitwise': 2,
