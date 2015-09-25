@@ -106,7 +106,7 @@ module.exports = {
     'block-scoped-var': 0,
     // 複雑度
     // http://eslint.org/docs/rules/complexity
-    'complexity': [1, 3],
+    'complexity': [1, 8],  // テスタブル JavaScript には 10 以下が適切とある
     // 一貫性のある return 必須化
     // http://eslint.org/docs/rules/consistent-return
     'consistent-return': 2,
@@ -306,7 +306,7 @@ module.exports = {
     'no-unused-vars': 2,
     // 定義前変数の使用禁止
     // http://eslint.org/docs/rules/no-use-before-define
-    'no-use-before-define': 2,
+    'no-use-before-define': [2, 'nofunc'],  // 関数の場合は hoisting 有効
 
     /**
      * Node.js
@@ -571,7 +571,7 @@ module.exports = {
     'max-params': [1, 3],
     // 関数内の文の数
     // http://eslint.org/docs/rules/max-statements
-    'max-statements': [1, 12],
+    'max-statements': [1, 10],
     // ビット演算子禁止
     // http://eslint.org/docs/rules/no-bitwise
     'no-bitwise': 2,
