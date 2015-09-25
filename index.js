@@ -314,6 +314,9 @@ module.exports = {
     // callback の return 強制
     // http://eslint.org/docs/rules/callback-return
     'callback-return': 2,
+    // top-level 以外での require を禁止
+    // http://eslint.org/docs/rules/global-require
+    'global-require': 2,
     // callback のエラーハンドリング強制
     // http://eslint.org/docs/rules/handle-callback-err
     'handle-callback-err': 2,
@@ -381,6 +384,9 @@ module.exports = {
     // インデントスタイル
     // http://eslint.org/docs/rules/indent
     'indent': [2, 2],
+    // JSX 属性のクオートスタイル
+    // http://eslint.org/docs/rules/jsx-quotes
+    'jsx-quotes': [2, 'prefer-double'],
     // オブジェクトリテラルのキーまわり空白スタイル
     // http://eslint.org/docs/rules/key-spacing
     'key-spacing': [2, { 'beforeColon': false, 'afterColon': true }],
@@ -420,6 +426,9 @@ module.exports = {
     // Object コンストラクタ禁止
     // http://eslint.org/docs/rules/no-new-object
     'no-new-object': 2,
+    // 制限された構文を禁止
+    // http://eslint.org/docs/rules/no-restricted-syntax
+    'no-restricted-syntax': 0,  // no-with, func-style で同様の制限をしているので無視
     // 関数呼び出し時の空白禁止
     // http://eslint.org/docs/rules/no-spaced-func
     'no-spaced-func': 2,
@@ -453,6 +462,9 @@ module.exports = {
     // 文字列のクォート
     // http://eslint.org/docs/rules/quotes
     'quotes': [2, 'single'],
+    // JSDoc 強制
+    // http://eslint.org/docs/rules/require-jsdoc
+    'require-jsdoc': 2,
     // セミコロン強制
     // http://eslint.org/docs/rules/semi
     'semi': 2,
@@ -471,6 +483,9 @@ module.exports = {
     // 関数の括弧前の空白
     // http://eslint.org/docs/rules/space-before-function-paren
     'space-before-function-paren': [2, 'never'],
+    // 特定キーワードの前の空白
+    // http://eslint.org/docs/rules/space-before-keywords
+    'space-before-keywords': [2, 'always'],
     // 括弧内の空白
     // http://eslint.org/docs/rules/space-in-parens
     'space-in-parens': [2, 'never'],
