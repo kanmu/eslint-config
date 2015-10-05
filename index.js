@@ -420,6 +420,9 @@ module.exports = {
     // 連続空白行数の制限
     // http://eslint.org/docs/rules/no-multiple-empty-lines
     'no-multiple-empty-lines': [2, {'max': 2}],
+    // 条件分岐での否定表現禁止
+    // http://eslint.org/docs/rules/no-negated-condition
+    'no-negated-condition': 0,  // 否定で簡潔に書けるならそのほうが好き
     // ネストした三項演算子禁止
     // http://eslint.org/docs/rules/no-nested-ternary
     'no-nested-ternary': 2,
