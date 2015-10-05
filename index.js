@@ -322,7 +322,7 @@ module.exports = {
     'handle-callback-err': 2,
     // require 内のモジュール形式 / 通常変数の混在禁止
     // http://eslint.org/docs/rules/no-mixed-requires
-    'no-mixed-requires': [2, true],
+    'no-mixed-requires': [2, {'grouping': true}],
     // new require の禁止
     // http://eslint.org/docs/rules/no-new-require
     'no-new-require': 2,
@@ -420,6 +420,9 @@ module.exports = {
     // 連続空白行数の制限
     // http://eslint.org/docs/rules/no-multiple-empty-lines
     'no-multiple-empty-lines': [2, {'max': 2}],
+    // 条件分岐での否定表現禁止
+    // http://eslint.org/docs/rules/no-negated-condition
+    'no-negated-condition': 0,  // 否定で簡潔に書けるならそのほうが好き
     // ネストした三項演算子禁止
     // http://eslint.org/docs/rules/no-nested-ternary
     'no-nested-ternary': 2,

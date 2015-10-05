@@ -15,7 +15,7 @@
     "extend": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.5.1"
+    "eslint": "^1.6.0"
   },
   "keywords": [
     "eslint",
