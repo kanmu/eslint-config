@@ -20,6 +20,9 @@ module.exports = extend(true, {}, base, {
     // displayName属性有無
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
     'react/display-name': [2, {'acceptTranspilerName': true}],
+    // 曖昧な PropTypes 禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
+    'react/forbid-prop-types': 0,  // 一旦無視
     // 暗黙の属性値 true の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
     'react/jsx-boolean-value': [2, 'always'], //
@@ -62,6 +65,9 @@ module.exports = extend(true, {}, base, {
     // componentDidUpdate 内での setState 禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
     'react/no-did-update-set-state': 2,
+    // state の直接更新禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
+    'react/no-direct-mutation-state': 2,
     // 1 ファイル内複数コンポーネント定義を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
     'react/no-multi-comp': 2,
