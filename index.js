@@ -322,7 +322,7 @@ module.exports = {
     'handle-callback-err': 2,
     // require 内のモジュール形式 / 通常変数の混在禁止
     // http://eslint.org/docs/rules/no-mixed-requires
-    'no-mixed-requires': [2, true],
+    'no-mixed-requires': [2, {'grouping': true}],
     // new require の禁止
     // http://eslint.org/docs/rules/no-new-require
     'no-new-require': 2,
