@@ -111,6 +111,8 @@ module.exports = extend(true, {}, base, {
             'mixins',
             'statics',
             'defaultProps',
+            'getStores',
+            'calculateState',
             'state',
             'constructor',
             'getDefaultProps',
