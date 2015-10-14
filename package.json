@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kanmu",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "ESLint configurations for Kanmu.",
   "main": "index.js",
   "files": [
