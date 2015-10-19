@@ -386,7 +386,7 @@ module.exports = {
     'indent': [2, 2],
     // JSX 属性のクオートスタイル
     // http://eslint.org/docs/rules/jsx-quotes
-    'jsx-quotes': [2, 'prefer-double'],
+    'jsx-quotes': 0,  // kanmu/react 側で有効化
     // オブジェクトリテラルのキーまわり空白スタイル
     // http://eslint.org/docs/rules/key-spacing
     'key-spacing': [2, { 'beforeColon': false, 'afterColon': true }],

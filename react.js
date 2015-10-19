@@ -15,6 +15,13 @@ module.exports = extend(true, {}, base, {
     'no-invalid-this': 0, // ES7 Property Initializers の関数をうまく判定できない
 
     /**
+     * Stylistic Issues
+     */
+    // JSX 属性のクオートスタイル
+    // http://eslint.org/docs/rules/jsx-quotes
+    'jsx-quotes': [2, 'prefer-double'],
+
+    /**
      * React
      */
     // displayName属性有無
