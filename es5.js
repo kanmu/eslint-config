@@ -19,6 +19,9 @@ module.exports = extend(true, {}, base, {
     // var をスコープ最上部に強制
     // http://eslint.org/docs/rules/vars-on-top
     'vars-on-top': 2,
+    // マジックナンバー禁止
+    // http://eslint.org/docs/rules/no-magic-numbers
+    'no-magic-numbers': [2, {enforceConst: false}],  // const 縛りを解除
 
     /**
      * Variables

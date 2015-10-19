@@ -86,6 +86,9 @@ module.exports = extend(true, {}, base, {
     // require で拡張子を強制
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
     'react/require-extension': 0,
+    // ES6 class を使うよう強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
+    'react/prefer-es6-class': 2,
     // コンポーネントの不要な閉じタグを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
     'react/self-closing-comp': 2,
