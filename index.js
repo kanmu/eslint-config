@@ -143,6 +143,9 @@ module.exports = {
     // for, switch 以外での label 禁止
     // http://eslint.org/docs/rules/no-empty-label
     'no-empty-label': 2,
+    // 変数が空になるような destructuring pattern を禁止
+    // http://eslint.org/docs/rules/no-empty-pattern
+    'no-empty-pattern': 2,
     // null と == / != な比較演算子使用禁止
     // http://eslint.org/docs/rules/no-eq-null
     'no-eq-null': 2,
@@ -182,6 +185,9 @@ module.exports = {
     // ループ内関数禁止
     // http://eslint.org/docs/rules/no-loop-func
     'no-loop-func': 2,
+    // マジックナンバー禁止
+    // http://eslint.org/docs/rules/no-magic-numbers
+    'no-magic-numbers': [2, {enforceConst: true}],  // const に縛りたい
     // 複数空白禁止
     // http://eslint.org/docs/rules/no-multi-spaces
     'no-multi-spaces': 2,
@@ -374,7 +380,7 @@ module.exports = {
     'func-names': 2,
     // 関数定義スタイル
     // http://eslint.org/docs/rules/func-style
-    'func-style': [2, 'declaration'],
+    'func-style': [2, 'declaration', {allowArrowFunctions: true}],
     // identifier (変数, 引数, プロパティ) の長さを制限
     // http://eslint.org/docs/rules/id-length
     'id-length': 0,
