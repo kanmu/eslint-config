@@ -390,6 +390,12 @@ module.exports = {
     // オブジェクトリテラルのキーまわり空白スタイル
     // http://eslint.org/docs/rules/key-spacing
     'key-spacing': [2, { 'beforeColon': false, 'afterColon': true }],
+    // 改行コードを指定
+    // http://eslint.org/docs/rules/linebreak-style
+    'linebreak-style': [2, 'unix'],
+    // コメントまわりの改行スタイル
+    // http://eslint.org/docs/rules/lines-around-comment
+    'lines-around-comment': [2, {'beforeBlockComment': true, 'allowBlockStart': true, 'allowObjectStart': true, 'allowArrayStart': true}],
     // callback ネスト数の制限
     // http://eslint.org/docs/rules/max-nested-callbacks
     'max-nested-callbacks': [1, 3],
