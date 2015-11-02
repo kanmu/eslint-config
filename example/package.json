@@ -9,7 +9,7 @@
   "author": "Kanmu, Inc.",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^1.7.1",
+    "eslint": "^1.8.0",
     "eslint-config-kanmu": "file:..",
     "eslint-plugin-react": "^3.6.2"
   },
