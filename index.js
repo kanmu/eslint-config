@@ -523,6 +523,9 @@ module.exports = {
     /**
      * ECMAScript 6
      */
+    // arrow function body の中括弧スタイル
+    // http://eslint.org/docs/rules/arrow-body-style
+    'arrow-body-style': 0,  // 1文が長くなってしまう場合には中括弧で改行したい
     // arrow function の括弧スタイル
     // http://eslint.org/docs/rules/arrow-parens
     'arrow-parens': [2, 'as-needed'],
@@ -535,6 +538,9 @@ module.exports = {
     // generator の * の空白スタイル
     // http://eslint.org/docs/rules/generator-star-spacing
     'generator-star-spacing': 2,
+    // 条件式への arrow function 混入禁止
+    // http://eslint.org/docs/rules/no-arrow-condition
+    'no-arrow-condition': 2,
     // class への再代入禁止
     // http://eslint.org/docs/rules/no-class-assign
     'no-class-assign': 2,
