@@ -4,7 +4,7 @@ var base = require('./');
 module.exports = extend(true, {}, base, {
   'ecmaFeatures': {'jsx': true},
   // npm install eslint-plugin-react
-  'plugins': ['react'],
+  'plugins': ['react', 'sorting'],
 
   'rules': {
     /**
