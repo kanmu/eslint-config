@@ -5,6 +5,7 @@ module.exports = {
     'es6': true,
     'node': true
   },
+  'plugins': ['sorting'],
 
   'rules': {
     /**
@@ -598,6 +599,13 @@ module.exports = {
     'no-bitwise': 2,
     // ++ / -- 禁止
     // http://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 0
+    'no-plusplus': 0,
+
+    /**
+     * Sorting
+     */
+    // オブジェクトプロパティ定義をアルファベット順に制限
+    // https://github.com/jacobrask/eslint-plugin-sorting
+    'sorting/sort-object-props': 2
   }
 };
