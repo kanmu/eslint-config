@@ -11,7 +11,8 @@
   "devDependencies": {
     "eslint": "^1.8.0",
     "eslint-config-kanmu": "file:..",
-    "eslint-plugin-react": "^3.6.2"
+    "eslint-plugin-react": "^3.6.2",
+    "eslint-plugin-sorting": "0.0.1"
   },
   "private": true
 }
