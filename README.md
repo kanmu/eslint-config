@@ -11,7 +11,7 @@ ESLint configurations for Kanmu.
 ## Installation
 
 ```
-npm install --save-dev eslint eslint-config-kanmu
+npm install --save-dev eslint eslint-config-kanmu eslint-plugin-sorting
 ```
 
 ## Usage
