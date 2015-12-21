@@ -132,6 +132,9 @@ module.exports = {
     // alert 禁止
     // http://eslint.org/docs/rules/no-alert
     'no-alert': 2,
+    // case/default 文内での変数宣言にブロック構文を強制
+    // http://eslint.org/docs/rules/no-case-declarations
+    'no-case-declarations': 2,
     // caller, callee 禁止
     // http://eslint.org/docs/rules/no-caller
     'no-caller': 2,
@@ -480,7 +483,7 @@ module.exports = {
     'quotes': [2, 'single'],
     // JSDoc 強制
     // http://eslint.org/docs/rules/require-jsdoc
-    'require-jsdoc': 2,
+    'require-jsdoc': [2, {'require': {'FunctionDeclaration': true, 'MethodDefinition': true, 'ClassDeclaration': true}}],
     // セミコロン強制
     // http://eslint.org/docs/rules/semi
     'semi': 2,

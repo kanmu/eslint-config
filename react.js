@@ -42,6 +42,9 @@ module.exports = extend(true, {}, base, {
     // 属性のインデントスタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
     'react/jsx-indent-props': [2, 2],
+    // key属性付与を強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
+    'react/jsx-key': 2,
     // 1行あたりの最大属性数
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
     'react/jsx-max-props-per-line': [2, 2],
@@ -51,6 +54,9 @@ module.exports = extend(true, {}, base, {
     // 未定義の React コンポーネントを使用禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
     'react/jsx-no-undef': 2,
+    // コンポーネント名にパスカルケースの使用を強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
+    'react/jsx-pascal-case': 2,
     // propTypes の定義をアルファベット順に制限
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-prop-types.md
     'react/jsx-sort-prop-types': 2,
@@ -71,7 +77,7 @@ module.exports = extend(true, {}, base, {
     'react/no-did-mount-set-state': [2, 'allow-in-func'],
     // componentDidUpdate 内での setState 禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
-    'react/no-did-update-set-state': 2,
+    'react/no-did-update-set-state': [2, 'allow-in-func'],
     // state の直接更新禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
     'react/no-direct-mutation-state': 2,
