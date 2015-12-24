@@ -568,7 +568,7 @@ module.exports = {
     'prefer-const': 2,
     // Reflect メソッドの利用提案
     // http://eslint.org/docs/rules/prefer-reflect
-    'prefer-reflect': 2,
+    'prefer-reflect': 0,
     // Spread オペレータの利用提案
     // http://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 2,
