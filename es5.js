@@ -21,7 +21,7 @@ module.exports = extend(true, {}, base, {
     'vars-on-top': 2,
     // マジックナンバー禁止
     // http://eslint.org/docs/rules/no-magic-numbers
-    'no-magic-numbers': [2, {enforceConst: false}],  // const 縛りを解除
+    'no-magic-numbers': [2, {enforceConst: false, ignore: [-2, -1, 0, 1, 2]}],  // const 縛りを解除
 
     /**
      * Variables
