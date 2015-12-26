@@ -188,7 +188,7 @@ module.exports = {
     'no-loop-func': 2,
     // マジックナンバー禁止
     // http://eslint.org/docs/rules/no-magic-numbers
-    'no-magic-numbers': [2, {enforceConst: true}],  // const に縛りたい
+    'no-magic-numbers': [2, {enforceConst: true, ignore: [-2, -1, 0, 1, 2]}],  // const に縛りたい
     // 複数空白禁止
     // http://eslint.org/docs/rules/no-multi-spaces
     'no-multi-spaces': 2,
