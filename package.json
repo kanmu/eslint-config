@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "eslint": "^1.10.0",
-    "eslint-plugin-react": "^3.6.2",
+    "eslint-plugin-react": "^4.0.0",
     "eslint-plugin-sorting": "0.0.1"
   },
   "keywords": [
