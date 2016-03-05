@@ -15,7 +15,7 @@
     "extend": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.0",
+    "eslint": "^2.3.0",
     "eslint-plugin-react": "^4.0.0",
     "eslint-plugin-sorting": "0.0.1"
   },
