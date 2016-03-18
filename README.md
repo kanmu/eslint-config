@@ -18,29 +18,84 @@ npm install --save-dev eslint eslint-config-kanmu eslint-plugin-sorting
 
 Add `.eslintrc` (YAML).
 
-### ES6
+### Summary
+
+- **Base**
+  - `kanmu`: ES2015
+  - `kanmu/es5`: ES5
+- **Optional**
+  - `kanmu/browser`: Browser env
+  - `kanmu/flow`: for Flow
+  - `kanmu/flow-jsdoc`: for JSDoc and Flow
+  - `kanmu/node`: for Node.js env
+  - `kanmu/react`: for React
+  - `kanmu/react-native`: for React Native
+  - `kanmu/mocha`: for Testing mocha
+
+### Examples
+
+#### ES6 (Node.js)
 
 ```yaml
-extends: kanmu
+extends:
+  - kanmu
+  - kanmu/node
 ```
 
-### ES5
+#### ES5 (Browser)
 
 ```yaml
-extends: kanmu/es5
+extends:
+  - kanmu/es5
+  - kanmu/browser
 ```
 
-### React
+#### React
 
 ```yaml
-extends: kanmu/react
+extends:
+  - kanmu
+  - kanmu/browser
+  - kanmu/react
 ```
 
-#### Additional Requirements
+##### Additional Requirements
 
 ```
 npm install --save-dev eslint-plugin-react
 ```
+
+#### React Native
+
+```yaml
+extends:
+  - kanmu
+  - kanmu/react-native
+```
+
+##### Additional Requirements
+
+```
+npm install --save-dev eslint-plugin-react eslint-plugin-react-native
+```
+
+
+#### React Native with Flow
+
+```yaml
+extends:
+  - kanmu
+  - kanmu/react-native
+  - kanmu/flow
+  - kanmu/flow-jsdoc
+```
+
+##### Additional Requirements
+
+```
+npm install --save-dev eslint-plugin-flow-vars eslint-plugin-jsdoc eslint-plugin-react eslint-plugin-react-native
+```
+
 
 [npm-url]: https://www.npmjs.com/package/eslint-config-kanmu
 [npm-image]: https://img.shields.io/npm/v/eslint-config-kanmu.svg
