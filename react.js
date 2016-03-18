@@ -1,7 +1,7 @@
 var extend = require('extend');
 var base = require('./');
 
-module.exports = extend(true, {}, base, {
+module.exports = {
   'parserOptions': {
     'ecmaFeatures': {
       'jsx': true
@@ -182,4 +182,4 @@ module.exports = extend(true, {}, base, {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
     'react/wrap-multilines': 2
   }
-});
+};
