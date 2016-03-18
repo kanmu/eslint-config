@@ -1,5 +1,7 @@
 module.exports = {
-  'ecmaFeatures': {'modules': true},
+  'parserOptions': {
+    'sourceType': 'module'
+  },
   'env': {
     'browser': true,
     'es6': true,
@@ -91,7 +93,18 @@ module.exports = {
     'use-isnan': 2,
     // 不正な JSDoc を禁止
     // http://eslint.org/docs/rules/valid-jsdoc
-    'valid-jsdoc': [2, {'requireReturn': false, 'requireReturnDescription': false}],
+    'valid-jsdoc': [2, {
+      'preferType': {
+        'Boolean': 'boolean',
+        'function': 'Function',
+        'Number': 'number',
+        'object': 'Object',
+        'String': 'string',
+        'Symbol': 'symbol'
+      },
+      'requireReturn': false,
+      'requireReturnDescription': false
+    }],
     // 不正な type 文字列を禁止
     // http://eslint.org/docs/rules/valid-typeof
     'valid-typeof': 2,
@@ -102,6 +115,9 @@ module.exports = {
     // getter / setter の組み合わせを強制
     // http://eslint.org/docs/rules/accessor-pairs
     'accessor-pairs': 0,
+    // Array系メソッドのコールバック関数で適切にreturnを使用することを強制
+    // http://eslint.org/docs/rules/array-callback-return
+    'array-callback-return': 2,
     // C-style なブロック scope var を強制
     // http://eslint.org/docs/rules/block-scoped-var
     'block-scoped-var': 0,
@@ -144,9 +160,9 @@ module.exports = {
     // else 内 return 禁止
     // http://eslint.org/docs/rules/no-else-return
     'no-else-return': 2,
-    // for, switch 以外での label 禁止
-    // http://eslint.org/docs/rules/no-empty-label
-    'no-empty-label': 2,
+    // コメントのない空関数禁止
+    // http://eslint.org/docs/rules/no-empty-function
+    'no-empty-function': 2,
     // 変数が空になるような destructuring pattern を禁止
     // http://eslint.org/docs/rules/no-empty-pattern
     'no-empty-pattern': 2,
@@ -162,6 +178,9 @@ module.exports = {
     // 不要な bind 禁止
     // http://eslint.org/docs/rules/no-extra-bind
     'no-extra-bind': 2,
+    // 不要なラベルの禁止
+    // http://eslint.org/docs/rules/no-extra-label
+    'no-extra-label': 2,
     // case 文の意図しない fallthrough を禁止
     // http://eslint.org/docs/rules/no-fallthrough
     'no-fallthrough': 2,
@@ -170,10 +189,13 @@ module.exports = {
     'no-floating-decimal': 2,
     // 省略型キャスト表記禁止
     // http://eslint.org/docs/rules/no-implicit-coercion
-    'no-implicit-coercion': [2, {'boolean': false, 'number': true, 'string': true}],
+    'no-implicit-coercion': [2, {'allow': ['!!'], 'boolean': true, 'number': true, 'string': true}],
     // 暗黙の eval 禁止
     // http://eslint.org/docs/rules/no-implied-eval
     'no-implied-eval': 2,
+    // グルーバルスコープへのvar, named functionの禁止
+    // http://eslint.org/docs/rules/no-implicit-globals
+    'no-implicit-globals': 2,
     // 不正な this 禁止
     // http://eslint.org/docs/rules/no-invalid-this
     'no-invalid-this': 2,
@@ -191,7 +213,11 @@ module.exports = {
     'no-loop-func': 2,
     // マジックナンバー禁止
     // http://eslint.org/docs/rules/no-magic-numbers
-    'no-magic-numbers': [2, {enforceConst: true, ignore: [-2, -1, 0, 1, 2]}],  // const に縛りたい
+    'no-magic-numbers': [2, {
+      'enforceConst': true,  // const に縛りたい
+      'ignore': [-2, -1, 0, 1, 2],
+      'ignoreArrayIndexes': true  // 配列の添字は許可
+    }],
     // 複数空白禁止
     // http://eslint.org/docs/rules/no-multi-spaces
     'no-multi-spaces': 2,
@@ -234,6 +260,9 @@ module.exports = {
     // URL 用途の javascript: 禁止
     // http://eslint.org/docs/rules/no-script-url
     'no-script-url': 2,
+    // 自己代入(同名変数への再代入)を禁止
+    // http://eslint.org/docs/rules/no-self-assign
+    'no-self-assign': 2,
     // 同変数比較禁止 (x === x)
     // http://eslint.org/docs/rules/no-self-compare
     'no-self-compare': 2,
@@ -243,9 +272,15 @@ module.exports = {
     // リテラル例外禁止
     // http://eslint.org/docs/rules/no-throw-literal
     'no-throw-literal': 2,
+    // whileやforの条件式に変更されない変数の指定禁止
+    // http://eslint.org/docs/rules/no-unmodified-loop-condition
+    'no-unmodified-loop-condition': 2,
     // 未使用の式禁止
     // http://eslint.org/docs/rules/no-unused-expressions
     'no-unused-expressions': 2,
+    // 未使用ラベルの禁止
+    // http://eslint.org/docs/rules/no-unused-labels
+    'no-unused-labels': 2,
     // 不要な .call() / .apply() の禁止
     // http://eslint.org/docs/rules/no-useless-call
     'no-useless-call': 2,
@@ -296,6 +331,9 @@ module.exports = {
     // 既存変数の label 使用禁止
     // http://eslint.org/docs/rules/no-label-var
     'no-label-var': 2,
+    // 指定グローバル変数の使用禁止
+    // http://eslint.org/docs/rules/no-restricted-globals
+    'no-restricted-globals': 0,  // いったん指定するものなし
     // scope 内の同名変数定義禁止
     // http://eslint.org/docs/rules/no-shadow
     'no-shadow': 2,
@@ -342,7 +380,10 @@ module.exports = {
     // process.exit 禁止
     // http://eslint.org/docs/rules/no-process-exit
     'no-process-exit': 2,
-    // 制限モジュールの使用禁止
+    // 制限モジュールの使用禁止 (module構文)
+    // http://eslint.org/docs/rules/no-restricted-imports
+    'no-restricted-imports': 0,
+    // 制限モジュールの使用禁止 (require関数)
     // http://eslint.org/docs/rules/no-restricted-modules
     'no-restricted-modules': 0,
     // 同期メソッド禁止
@@ -385,6 +426,9 @@ module.exports = {
     // 関数定義スタイル
     // http://eslint.org/docs/rules/func-style
     'func-style': [2, 'declaration', {allowArrowFunctions: true}],
+    // 変数名に使用禁止な名前リスト
+    // http://eslint.org/docs/rules/id-blacklist
+    'id-blacklist': 0,
     // identifier (変数, 引数, プロパティ) の長さを制限
     // http://eslint.org/docs/rules/id-length
     'id-length': 0,
@@ -400,6 +444,9 @@ module.exports = {
     // オブジェクトリテラルのキーまわり空白スタイル
     // http://eslint.org/docs/rules/key-spacing
     'key-spacing': [2, { 'beforeColon': false, 'afterColon': true }],
+    // キーワードまわりの空白スタイル
+    // http://eslint.org/docs/rules/keyword-spacing
+    'keyword-spacing': [2, {'before': true, 'after': true}],
     // 改行コードを指定
     // http://eslint.org/docs/rules/linebreak-style
     'linebreak-style': [2, 'unix'],
@@ -418,6 +465,12 @@ module.exports = {
     // var, let, const 後の空行
     // http://eslint.org/docs/rules/newline-after-var
     'newline-after-var': 0,
+    // returnの前に空行を必須化
+    // http://eslint.org/docs/rules/newline-before-return
+    'newline-before-return': 0,
+    // 1行あたりのchain呼出回数を制限
+    // http://eslint.org/docs/rules/newline-per-chained-call
+    'newline-per-chained-call': [0, {'ignoreChainWithDepth': 3}], // moment等まとまったほうが嬉しいパターンもあるので無効 / 1行に3つ以上のchainを警告
     // Array コンストラクタでの配列要素作成禁止
     // http://eslint.org/docs/rules/no-array-constructor
     'no-array-constructor': 2,
@@ -456,16 +509,22 @@ module.exports = {
     'no-trailing-spaces': 2,
     // 識別子としてのアンダースコアの使用を禁止
     // http://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': 0,
+    'no-underscore-dangle': [2, {'allowAfterThis': true}],  // thisのみ許可
     // 無駄な三項演算子の禁止
     // http://eslint.org/docs/rules/no-unneeded-ternary
     'no-unneeded-ternary': 2,
+    // オブジェクトプロパティアクセスのドット前の空白を禁止
+    // http://eslint.org/docs/rules/no-whitespace-before-property
+    'no-whitespace-before-property': 2,
     // オブジェクトの中括弧内の空白
     // http://eslint.org/docs/rules/object-curly-spacing
     'object-curly-spacing': [2, 'never'],
-    // 1行変数定義スタイル
+    // 変数定義初期化スタイル
     // http://eslint.org/docs/rules/one-var
-    'one-var': [2, {'uninitialized': 'always', 'initialized': 'never'}],
+    'one-var': [2, {'uninitialized': 'always', 'initialized': 'never'}],  // 値なしで初期化する場合はvarを1つにまとめ、値ありで初期化する場合はvarを変数分
+    // 1行変数定義スタイル
+    // http://eslint.org/docs/rules/one-var-declaration-per-line
+    'one-var-declaration-per-line': 0,  // 1行で複数変数を定義することを許可する
     // 変数代入のスタイル
     // http://eslint.org/docs/rules/operator-assignment
     'operator-assignment': 0,
@@ -490,30 +549,24 @@ module.exports = {
     // セミコロンまわりの空白スタイル
     // http://eslint.org/docs/rules/semi-spacing
     'semi-spacing': [2, {'before': false, 'after': true}],
+    // importをアルファベット順に制限
+    // http://eslint.org/docs/rules/sort-imports
+    'sort-imports': 0,  // 期待するソートじゃない
     // 変数定義をアルファベット順に制限
     // http://eslint.org/docs/rules/sort-vars
     'sort-vars': 2,
-    // 特定キーワードの後の空白
-    // http://eslint.org/docs/rules/space-after-keywords
-    'space-after-keywords': [2, 'always'],
     // ブロックの前の空白
     // http://eslint.org/docs/rules/space-before-blocks
     'space-before-blocks': [2, 'always'],
     // 関数の括弧前の空白
     // http://eslint.org/docs/rules/space-before-function-paren
     'space-before-function-paren': [2, 'never'],
-    // 特定キーワードの前の空白
-    // http://eslint.org/docs/rules/space-before-keywords
-    'space-before-keywords': [2, 'always'],
     // 括弧内の空白
     // http://eslint.org/docs/rules/space-in-parens
     'space-in-parens': [2, 'never'],
     // 演算子まわりの空白スタイル
     // http://eslint.org/docs/rules/space-infix-ops
     'space-infix-ops': 2,
-    // return, throw, case まわりの空白強制
-    // http://eslint.org/docs/rules/space-return-throw-case
-    'space-return-throw-case': 2,
     // 演算子まわりの空白
     // http://eslint.org/docs/rules/space-unary-ops
     'space-unary-ops': [2, {'words': true, 'nonwords': false}],
@@ -542,12 +595,12 @@ module.exports = {
     // generator の * の空白スタイル
     // http://eslint.org/docs/rules/generator-star-spacing
     'generator-star-spacing': 2,
-    // 条件式への arrow function 混入禁止
-    // http://eslint.org/docs/rules/no-arrow-condition
-    'no-arrow-condition': 2,
     // class への再代入禁止
     // http://eslint.org/docs/rules/no-class-assign
     'no-class-assign': 2,
+    // 条件式とまぎらわしいarrow functionを警告
+    // http://eslint.org/docs/rules/no-confusing-arrow
+    'no-confusing-arrow': 2,
     // const への再代入禁止
     // http://eslint.org/docs/rules/no-const-assign
     'no-const-assign': 2,
@@ -557,6 +610,9 @@ module.exports = {
     // コンストラクタ内 super の前の this 禁止
     // http://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 2,
+    // 不要なコンストラクタ関数の禁止
+    // http://eslint.org/docs/rules/no-useless-constructor
+    'no-useless-constructor': 2,
     // var 禁止
     // http://eslint.org/docs/rules/no-var
     'no-var': 2,
@@ -572,6 +628,9 @@ module.exports = {
     // Reflect メソッドの利用提案
     // http://eslint.org/docs/rules/prefer-reflect
     'prefer-reflect': 0,
+    // rest-paramsの利用提案 (arguments禁止)
+    // http://eslint.org/docs/rules/prefer-rest-params
+    'prefer-rest-params': 2,
     // Spread オペレータの利用提案
     // http://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 2,
@@ -581,6 +640,12 @@ module.exports = {
     // yield の必須化
     // http://eslint.org/docs/rules/require-yield
     'require-yield': 2,
+    // テンプレートリテラルの`${..}`の空白スタイル
+    // http://eslint.org/docs/rules/template-curly-spacing
+    'template-curly-spacing': [2, 'never'],
+    // yieldの*まわりの空白スタイル
+    // http://eslint.org/docs/rules/yield-star-spacing
+    'yield-star-spacing': [2, 'after'],
 
     /**
      * Legacy
@@ -590,7 +655,7 @@ module.exports = {
     'max-depth': [1, 3],
     // 1行の長さ
     // http://eslint.org/docs/rules/max-len
-    'max-len': [1, 100, 2],
+    'max-len': [1, {'code': 100, 'tabWidth': 2, 'ignoreUrls': true}],  // URLは無視
     // 引数の数
     // http://eslint.org/docs/rules/max-params
     'max-params': [1, 3],
