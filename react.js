@@ -2,7 +2,11 @@ var extend = require('extend');
 var base = require('./');
 
 module.exports = extend(true, {}, base, {
-  'ecmaFeatures': {'jsx': true},
+  'parserOptions': {
+    'ecmaFeatures': {
+      'jsx': true
+    }
+  },
   // npm install eslint-plugin-react
   'plugins': ['react', 'sorting'],
 
@@ -26,7 +30,7 @@ module.exports = extend(true, {}, base, {
      */
     // displayName属性有無
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
-    'react/display-name': [2, {'acceptTranspilerName': true}],
+    'react/display-name': [2, {'ignoreTranspilerName': false}],
     // 曖昧な PropTypes 禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
     'react/forbid-prop-types': 0,  // 一旦無視
@@ -39,6 +43,15 @@ module.exports = extend(true, {}, base, {
     // 属性式内のスペーススタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
     'react/jsx-curly-spacing': [2, 'never', {'allowMultiline': true}],
+    // 属性のイコール周辺の空白スタイル
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
+    'react/jsx-equals-spacing': [2, 'never'],
+    // コンポーネントのイベントハンドラ名prefix強制 (ex. <Comp onChange={this.handleChange} />)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
+    'react/jsx-handler-names': 0,
+    // JSXタグのインデント
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
+    'react/jsx-indent': [2, 2],  // スペース2
     // 属性のインデントスタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
     'react/jsx-indent-props': [2, 2],
@@ -47,7 +60,10 @@ module.exports = extend(true, {}, base, {
     'react/jsx-key': 2,
     // 1行あたりの最大属性数
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-    'react/jsx-max-props-per-line': [2, 2],
+    'react/jsx-max-props-per-line': [2, {'maximum': 2}],
+    // propsでの.bind() or arrow function禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+    'react/jsx-no-bind': 0,  // flowの都合上bindつかってる
     // props の重複禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
     'react/jsx-no-duplicate-props': 2,
@@ -57,12 +73,9 @@ module.exports = extend(true, {}, base, {
     // コンポーネント名にパスカルケースの使用を強制
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
     'react/jsx-pascal-case': 2,
-    // propTypes の定義をアルファベット順に制限
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-prop-types.md
-    'react/jsx-sort-prop-types': 2,
     // props の使用をアルファベット順に制限
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
-    'react/jsx-sort-props': 2,
+    'react/jsx-sort-props': [2, {'callbacksLast': true, 'shorthandFirst': true}],  // 値なしは最初、callback(onXXX)系は最後に
     // React 的に不適切な箇所での no-unused-vars 発動禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
     'react/jsx-uses-react': 2,
@@ -72,6 +85,9 @@ module.exports = extend(true, {}, base, {
     // dangerouslySetInnerHTML の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
     'react/no-danger': 0,  // 使うときは覚悟を持って使う
+    // deprecatedな記法を警告
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
+    'react/no-deprecated': 0,  // 必要なさそう
     // componentDidMount 内での setState 禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
     'react/no-did-mount-set-state': [2, 'allow-in-func'],
@@ -81,12 +97,18 @@ module.exports = extend(true, {}, base, {
     // state の直接更新禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
     'react/no-direct-mutation-state': 2,
+    // isMounted()を禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
+    'react/no-is-mounted': 2,
     // 1 ファイル内複数コンポーネント定義を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
     'react/no-multi-comp': 2,
     // setState 禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
     'react/no-set-state': 0,  // ストイックすぎる
+    // 文字列refの禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
+    'react/no-string-refs': 2,
     // 不適切な DOM 属性使用の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
     'react/no-unknown-property': 2,
@@ -102,15 +124,22 @@ module.exports = extend(true, {}, base, {
     // ES6 class を使うよう強制
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
     'react/prefer-es6-class': 2,
+    // stateless Componentを使うよう強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
+    'react/prefer-stateless-function': 2,
     // コンポーネントの不要な閉じタグを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
     'react/self-closing-comp': 2,
+    // 閉じタグ前に空白を強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
+    'react/jsx-space-before-closing': [2, 'always'],
     // React コンポーネントメソッド定義順
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
     'react/sort-comp': [
       2,
       {
         'order': [
+          'static-methods',
           'lifecycle',
           'everything-else',
           '/^on.+$/',
@@ -146,6 +175,9 @@ module.exports = extend(true, {}, base, {
         }
       }
     ],
+    // propTypes の定義をアルファベット順に制限
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-prop-types.md
+    'react/sort-prop-types': 2,
     // 括弧のない複数行の JSX を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
     'react/wrap-multilines': 2
