@@ -672,6 +672,6 @@ module.exports = {
      */
     // オブジェクトプロパティ定義をアルファベット順に制限
     // https://github.com/jacobrask/eslint-plugin-sorting
-    'sorting/sort-object-props': 2
+    'sorting/sort-object-props': [2, {'caseSensitive': false, 'ignoreMethods': false}]
   }
 };
