@@ -2,7 +2,9 @@ var extend = require('extend');
 var base = require('./');
 
 module.exports = extend(true, {}, base, {
-  'ecmaFeatures': {'modules': false},
+  'parserOptions': {
+    'sourceType': 'script'
+  },
   'env': {'es6': false},
 
   'rules': {
@@ -56,12 +58,12 @@ module.exports = extend(true, {}, base, {
     // generator の * の空白スタイル
     // http://eslint.org/docs/rules/generator-star-spacing
     'generator-star-spacing': 0,
-    // 条件式への arrow function 混入禁止
-    // http://eslint.org/docs/rules/no-arrow-condition
-    'no-arrow-condition': 0,
     // class への再代入禁止
     // http://eslint.org/docs/rules/no-class-assign
     'no-class-assign': 0,
+    // 条件式とまぎらわしいarrow functionを警告
+    // http://eslint.org/docs/rules/no-confusing-arrow
+    'no-confusing-arrow': 0,
     // const への再代入禁止
     // http://eslint.org/docs/rules/no-const-assign
     'no-const-assign': 0,
@@ -71,6 +73,9 @@ module.exports = extend(true, {}, base, {
     // コンストラクタ内 super の前の this 禁止
     // http://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 0,
+    // 不要なコンストラクタ関数の禁止
+    // http://eslint.org/docs/rules/no-useless-constructor
+    'no-useless-constructor': 0,
     // var 禁止
     // http://eslint.org/docs/rules/no-var
     'no-var': 0,
@@ -86,6 +91,9 @@ module.exports = extend(true, {}, base, {
     // Reflect メソッドの利用提案
     // http://eslint.org/docs/rules/prefer-reflect
     'prefer-reflect': 0,
+    // rest-paramsの利用提案 (arguments禁止)
+    // http://eslint.org/docs/rules/prefer-rest-params
+    'prefer-rest-params': 0,
     // Spread オペレータの利用提案
     // http://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 0,
@@ -94,6 +102,12 @@ module.exports = extend(true, {}, base, {
     'prefer-template': 0,
     // yield の必須化
     // http://eslint.org/docs/rules/require-yield
-    'require-yield': 0
+    'require-yield': 0,
+    // テンプレートリテラルの`${..}`の空白スタイル
+    // http://eslint.org/docs/rules/template-curly-spacing
+    'template-curly-spacing': 0,
+    // yieldの*まわりの空白スタイル
+    // http://eslint.org/docs/rules/yield-star-spacing
+    'yield-star-spacing': 0
   }
 });
