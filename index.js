@@ -285,6 +285,9 @@ module.exports = {
     // 不要な文字列連結の禁止
     // http://eslint.org/docs/rules/no-useless-concat
     'no-useless-concat': 2,
+    // 不要なエスケープの禁止
+    // http://eslint.org/docs/rules/no-useless-escape
+    'no-useless-escape': 2,
     // void 禁止
     // http://eslint.org/docs/rules/no-void
     'no-void': 2,
@@ -454,6 +457,9 @@ module.exports = {
     // callback ネスト数の制限
     // http://eslint.org/docs/rules/max-nested-callbacks
     'max-nested-callbacks': [1, 3],
+    // 1行の文の数を制限
+    // http://eslint.org/docs/rules/max-statements-per-line
+    'max-statements-per-line': 0,  // ここまで厳密にしなくてもよさそう
     // コンストラクタの new 必須化
     // http://eslint.org/docs/rules/new-cap
     'new-cap': 2,
@@ -602,6 +608,9 @@ module.exports = {
     // const への再代入禁止
     // http://eslint.org/docs/rules/no-const-assign
     'no-const-assign': 2,
+    // importの重複禁止
+    // http://eslint.org/docs/rules/no-duplicate-imports
+    'no-duplicate-imports': 2,
     // クラスメンバ名の重複禁止
     // http://eslint.org/docs/rules/no-dupe-class-members
     'no-dupe-class-members': 2,

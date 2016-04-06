@@ -70,6 +70,9 @@ module.exports = extend(true, {}, base, {
     // クラスメンバ名の重複禁止
     // http://eslint.org/docs/rules/no-dupe-class-members
     'no-dupe-class-members': 0,
+    // importの重複禁止
+    // http://eslint.org/docs/rules/no-duplicate-imports
+    'no-duplicate-imports': 0,
     // コンストラクタ内 super の前の this 禁止
     // http://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 0,
