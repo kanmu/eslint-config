@@ -76,9 +76,15 @@ module.exports = extend(true, {}, base, {
     // コンストラクタ内 super の前の this 禁止
     // http://eslint.org/docs/rules/no-this-before-super
     'no-this-before-super': 0,
+    // 不要なcomputed propertiesを禁止
+    // http://eslint.org/docs/rules/no-useless-computed-key
+    'no-useless-computed-key': 0,
     // 不要なコンストラクタ関数の禁止
     // http://eslint.org/docs/rules/no-useless-constructor
     'no-useless-constructor': 0,
+    // import/export/destructuredでの不要なリネーム禁止
+    // http://eslint.org/docs/rules/no-useless-rename
+    'no-useless-rename': 0,
     // var 禁止
     // http://eslint.org/docs/rules/no-var
     'no-var': 0,
@@ -91,6 +97,9 @@ module.exports = extend(true, {}, base, {
     // const の利用提案
     // http://eslint.org/docs/rules/prefer-const
     'prefer-const': 0,
+    // 定数値のparseIntで数値リテラルの利用を提案
+    // http://eslint.org/docs/rules/prefer-numeric-literals
+    'prefer-numeric-literals': 0,
     // Reflect メソッドの利用提案
     // http://eslint.org/docs/rules/prefer-reflect
     'prefer-reflect': 0,
@@ -106,6 +115,12 @@ module.exports = extend(true, {}, base, {
     // yield の必須化
     // http://eslint.org/docs/rules/require-yield
     'require-yield': 0,
+    // spread演算子とrest演算子の空白スタイル
+    // http://eslint.org/docs/rules/rest-spread-spacing
+    'rest-spread-spacing': 0,
+    // Symbolの第一引数(説明)を強制
+    // http://eslint.org/docs/rules/symbol-description
+    'symbol-description': 0,
     // テンプレートリテラルの`${..}`の空白スタイル
     // http://eslint.org/docs/rules/template-curly-spacing
     'template-curly-spacing': 0,
