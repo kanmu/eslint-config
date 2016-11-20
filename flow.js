@@ -40,6 +40,9 @@ module.exports = {
     // 逃げの型を禁止
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/no-weak-types': 0,  // 逃げたいときはある
+    // オブジェクト属性の区切り記号
+    // https://github.com/gajus/eslint-plugin-flowtype
+    'flowtype/object-type-delimiter': [2, 'comma'],
     // 引数の型付けを強制
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/require-parameter-type': 0,  // flow側にまかせたいときがある
