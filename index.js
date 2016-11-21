@@ -269,6 +269,9 @@ module.exports = {
     // return 文での変数代入禁止
     // http://eslint.org/docs/rules/no-return-assign
     'no-return-assign': 2,
+    // 不要なawait文の禁止
+    // http://eslint.org/docs/rules/no-return-await
+    'no-return-await': 2,
     // URL 用途の javascript: 禁止
     // http://eslint.org/docs/rules/no-script-url
     'no-script-url': 2,
@@ -302,6 +305,9 @@ module.exports = {
     // 不要なエスケープの禁止
     // http://eslint.org/docs/rules/no-useless-escape
     'no-useless-escape': 2,
+    // 不要なreturn文の禁止
+    // http://eslint.org/docs/rules/no-useless-return
+    'no-useless-return': 2,
     // void 禁止
     // http://eslint.org/docs/rules/no-void
     'no-void': 2,
@@ -319,7 +325,7 @@ module.exports = {
     'vars-on-top': 0,
     // 即時関数の括弧のスタイル
     // http://eslint.org/docs/rules/wrap-iife
-    'wrap-iife': [2, 'inside'],
+    'wrap-iife': [2, 'inside', {'functionPrototypeMethods': true}],
     // 評価式内のリテラルと変数の記述順スタイル
     // http://eslint.org/docs/rules/yoda
     'yoda': [2, 'never'],
@@ -438,6 +444,9 @@ module.exports = {
     // 関数呼び出しの括弧前の空白スタイル
     // http://eslint.org/docs/rules/func-call-spacing
     'func-call-spacing': 2,
+    // 関数名と代入先の変数・プロパティ名が合致
+    // http://eslint.org/docs/rules/func-name-matching
+    'func-name-matching': 0,
     // 関数名を持たせるための function 式を強制
     // http://eslint.org/docs/rules/func-names
     'func-names': 2,
@@ -605,7 +614,7 @@ module.exports = {
     'space-before-blocks': [2, 'always'],
     // 関数の括弧前の空白
     // http://eslint.org/docs/rules/space-before-function-paren
-    'space-before-function-paren': [2, 'never'],
+    'space-before-function-paren': [2, {'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always'}],
     // 括弧内の空白
     // http://eslint.org/docs/rules/space-in-parens
     'space-in-parens': [2, 'never'],

@@ -94,6 +94,9 @@ module.exports = {
     // props の使用をアルファベット順に制限
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
     'react/jsx-sort-props': [2, {'callbacksLast': true, 'shorthandFirst': true}],  // 値なしは最初、callback(onXXX)系は最後に
+    // jsxタグの空白ルール
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+    'react/jsx-tag-spacing': 2,
     // React 的に不適切な箇所での no-unused-vars 発動禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
     'react/jsx-uses-react': 2,
