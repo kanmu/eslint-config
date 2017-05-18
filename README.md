@@ -1,5 +1,7 @@
 # eslint-config-kanmu
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kanmu/eslint-config.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
