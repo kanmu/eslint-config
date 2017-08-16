@@ -27,7 +27,7 @@ module.exports = {
     'flowtype/boolean-style': [2, 'boolean'],
     // 未定義のflowtypeを警告
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/define-flow-type': [2, {'no-use-before-define': [2, 'nofunc']}],
+    'flowtype/define-flow-type': [2],
     // ケツカンマのスタイル
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/delimiter-dangle': [2, 'never'],
@@ -75,7 +75,7 @@ module.exports = {
     'flowtype/union-intersection-spacing': [2, 'always'],
     // type aliasを使用したものと解釈
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/use-flow-type': [2, {'no-unused-vars': 1}]
+    'flowtype/use-flow-type': [2]
   },
   'settings': {
     'flowtype': {
