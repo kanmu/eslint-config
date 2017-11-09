@@ -700,6 +700,9 @@ module.exports = {
     // const の利用提案
     // http://eslint.org/docs/rules/prefer-const
     'prefer-const': 2,
+    // 分割代入の利用提案
+    // https://eslint.org/docs/rules/prefer-destructuring
+    'prefer-destructuring': 2,
     // 定数値のparseIntで数値リテラルの利用を提案
     // http://eslint.org/docs/rules/prefer-numeric-literals
     'prefer-numeric-literals': 2,
