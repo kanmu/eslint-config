@@ -320,6 +320,9 @@ module.exports = {
     // parseInt() の基数パラメータ必須化
     // http://eslint.org/docs/rules/radix
     'radix': 2,
+    // awaitのないasync関数禁止
+    // https://eslint.org/docs/rules/require-await
+    'require-await': 2,
     // var をスコープ最上部に強制
     // http://eslint.org/docs/rules/vars-on-top
     'vars-on-top': 0,
@@ -426,6 +429,9 @@ module.exports = {
     // キャメルケース必須化
     // http://eslint.org/docs/rules/camelcase
     'camelcase': 2,
+    // コメントの英文の大文字小文字ルール
+    // https://eslint.org/docs/rules/capitalized-comments
+    'capitalized-comments': 0,
     // カンマまわりの空白スタイル
     // http://eslint.org/docs/rules/comma-spacing
     'comma-spacing': 2,
