@@ -642,6 +642,9 @@ module.exports = {
     // コメント内の空白
     // http://eslint.org/docs/rules/spaced-comment
     'spaced-comment': [2, 'always', {'exceptions': ['-', '+'], 'block': {'balanced': true}}],
+    // タグ付きテンプレート式の空白ルール
+    // https://eslint.org/docs/rules/template-tag-spacing
+    'template-tag-spacing': [2, 'never'],
     // BOMの扱い
     // http://eslint.org/docs/rules/unicode-bom
     'unicode-bom': [2, 'never'],
