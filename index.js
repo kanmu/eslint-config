@@ -437,7 +437,7 @@ module.exports = {
      */
     // 配列括弧の改行スタイル
     // https://eslint.org/docs/rules/array-bracket-newline
-    'array-bracket-newline': 0,  // 行の長さによって改行要否を変えたりしたい
+    'array-bracket-newline': [2, 'consistent'],
     // 配列括弧の空白スタイル
     // http://eslint.org/docs/rules/array-bracket-spacing
     'array-bracket-spacing': 2,
@@ -507,6 +507,9 @@ module.exports = {
     // キーワードまわりの空白スタイル
     // http://eslint.org/docs/rules/keyword-spacing
     'keyword-spacing': [2, {'before': true, 'after': true}],
+    // クラスメソッドの空白行スタイル
+    // https://eslint.org/docs/rules/lines-between-class-members
+    'lines-between-class-members': [2, 'always', {'exceptAfterSingleLine': true}],  // 1行の場合はチェック除外
     // 行コメントの位置スタイル
     // http://eslint.org/docs/rules/line-comment-position
     'line-comment-position': 0,  // 状況によって変えたい
@@ -515,7 +518,7 @@ module.exports = {
     'linebreak-style': [2, 'unix'],
     // コメントまわりの改行スタイル
     // http://eslint.org/docs/rules/lines-around-comment
-    'lines-around-comment': [2, {'beforeBlockComment': true, 'allowBlockStart': true, 'allowObjectStart': true, 'allowArrayStart': true}],
+    'lines-around-comment': [2, {'beforeBlockComment': true, 'allowBlockStart': true, 'allowObjectStart': true, 'allowArrayStart': true, 'allowClassEnd': true, 'allowClassStart': true}],
     // 1ファイルの最大行を制限
     // http://eslint.org/docs/rules/max-lines
     'max-lines': 0,
@@ -525,6 +528,9 @@ module.exports = {
     // 1行の文の数を制限
     // http://eslint.org/docs/rules/max-statements-per-line
     'max-statements-per-line': 0,  // ここまで厳密にしなくてもよさそう
+    // 複数行のコメントスタイル
+    // https://eslint.org/docs/rules/multiline-comment-style
+    'multiline-comment-style': 0,  // 連続でラインコメント使いたい場合もある
     // 三項演算子を仕様時に改行を強制
     // http://eslint.org/docs/rules/multiline-ternary
     'multiline-ternary': 0,
@@ -626,7 +632,7 @@ module.exports = {
     'quotes': [2, 'single'],
     // JSDoc 強制
     // http://eslint.org/docs/rules/require-jsdoc
-    'require-jsdoc': [2, {'require': {'FunctionDeclaration': true, 'MethodDefinition': true, 'ClassDeclaration': true}}],
+    'require-jsdoc': [2, {'require': {'ArrowFunctionExpression': true, 'FunctionDeclaration': true, 'FunctionExpression': true, 'MethodDefinition': true, 'ClassDeclaration': true}}],
     // セミコロン強制
     // http://eslint.org/docs/rules/semi
     'semi': 2,
