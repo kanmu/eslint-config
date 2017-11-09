@@ -16,6 +16,9 @@ module.exports = {
     // for文の比較と更新方向の相違を指摘
     // https://eslint.org/docs/rules/for-direction
     'for-direction': 2,
+    // returnしないコードパスを持つGetterを指摘
+    // https://eslint.org/docs/rules/getter-return
+    'getter-return': 2,
     // ループ内でのawait禁止
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 2,
