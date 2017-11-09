@@ -320,6 +320,9 @@ module.exports = {
     // with 禁止
     // http://eslint.org/docs/rules/no-with
     'no-with': 2,
+    // Promiseのreject時にErrorの使用推奨
+    // https://eslint.org/docs/rules/prefer-promise-reject-errors
+    'prefer-promise-reject-errors': 2,
     // parseInt() の基数パラメータ必須化
     // http://eslint.org/docs/rules/radix
     'radix': 2,
@@ -540,6 +543,9 @@ module.exports = {
     // 空白とタブの混在禁止
     // http://eslint.org/docs/rules/no-mixed-spaces-and-tabs
     'no-mixed-spaces-and-tabs': 2,
+    // 代入の連鎖記法を禁止 (ex. a = b = 2)
+    // https://eslint.org/docs/rules/no-multi-assign
+    'no-multi-assign': 2,
     // 連続空白行数の制限
     // http://eslint.org/docs/rules/no-multiple-empty-lines
     'no-multiple-empty-lines': [2, {'max': 2}],
