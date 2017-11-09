@@ -13,6 +13,9 @@ module.exports = {
     // ケツカンマスタイル
     // http://eslint.org/docs/rules/comma-dangle
     'comma-dangle': 2,
+    // ループ内でのawait禁止
+    // https://eslint.org/docs/rules/no-await-in-loop
+    'no-await-in-loop': 2,
     // 評価文内の変数代入禁止
     // http://eslint.org/docs/rules/no-cond-assign
     'no-cond-assign': 2,
