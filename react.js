@@ -28,6 +28,18 @@ module.exports = {
     /**
      * React
      */
+    // boolean型のpropsの命名規則を強制 (isFoo, hasFoo)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+    'react/boolean-prop-naming': 2,
+    // buttonタグのtype属性に変な値を入れない
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
+    'react/button-has-type': 2,
+    // defaultPropsがpropTypesで必須指定でないことを保証
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+    'react/default-props-match-prop-types': 2,
+    // 分割代入を強制する
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+    'react/destructuring-assignment': 0,  // 強制しなくてもよさそう
     // displayName属性有無
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
     'react/display-name': [2, {'ignoreTranspilerName': false}],
@@ -43,9 +55,14 @@ module.exports = {
     // 閉じタグの場所強制
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
     'react/jsx-closing-bracket-location': [2, {location: 'tag-aligned'}],
+    // 複数行JSXの閉じタグの位置を強制
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+    'react/jsx-closing-tag-location': 2,
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
+    'react/jsx-curly-brace-presence': [2, {'children': 'never', 'props': 'never'}],
     // 属性式内のスペーススタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-    'react/jsx-curly-spacing': [2, 'never', {'allowMultiline': true}],
+    'react/jsx-curly-spacing': [2, {'allowMultiline': true, 'children': true, 'when': 'never'}],
     // 属性のイコール周辺の空白スタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
     'react/jsx-equals-spacing': [2, 'never'],
@@ -79,9 +96,18 @@ module.exports = {
     // props の重複禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
     'react/jsx-no-duplicate-props': 2,
+    // JSXタグを1行につき1つだけにする
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
+    'react/jsx-one-expression-per-line': 0,  // そうしたくない場合もある
     // findDOMNodeの使用禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
     'react/no-find-dom-node': 2,
+    // 不要なshouldComponentUpdate (PureComponentとの併用) を禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
+    'react/no-redundant-should-component-update': 2,
+    // JSX内での生文字列使用を禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
+    'react/jsx-no-literals': 2,  // childrenに文字列そのまま使えないのはつらそう
     // target='_blank'の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
     'react/jsx-no-target-blank': 2,
@@ -106,6 +132,9 @@ module.exports = {
     // 括弧のない複数行の JSX を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
     'react/jsx-wrap-multilines': 2,
+    // setState内でのthis.stateの仕様を禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
+    'react/no-access-state-in-setstate': 2,
     // children propsを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
     'react/no-children-prop': 2,  // flowの関係上使いたい場合がある
@@ -142,6 +171,9 @@ module.exports = {
     // 文字列refの禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
     'react/no-string-refs': 2,
+    // Reactのlifecycleメソッド等のtypoを防止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
+    'react/no-typos': 2,
     // escapeしていないmarkupを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
     'react/no-unescaped-entities': 2,
@@ -151,6 +183,9 @@ module.exports = {
     // 使用していないpropsを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
     'react/no-unused-prop-types': 2,
+    // 使用していないstateを禁止
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
+    'react/no-unused-state': 2,
     // propTypes 未定義の props 使用禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
     'react/prop-types': 2,
@@ -172,9 +207,6 @@ module.exports = {
     // コンポーネントの不要な閉じタグを禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
     'react/self-closing-comp': [2, {'component': true, 'html': true}],
-    // 閉じタグ前に空白を強制
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-    'react/jsx-space-before-closing': [2, 'always'],
     // React コンポーネントメソッド定義順
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
     'react/sort-comp': [
@@ -184,38 +216,14 @@ module.exports = {
           'type-annotations',
           'static-methods',
           'lifecycle',
-          'everything-else',
           '/^on.+$/',
-          '/^get.+$/',
+          'getters',
+          'setters',
+          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+          'everything-else',
           '/^render.+$/',
           'render'
-        ],
-        'groups': {
-          'lifecycle': [
-            'displayName',
-            'propTypes',
-            'contextTypes',
-            'childContextTypes',
-            'mixins',
-            'statics',
-            'defaultProps',
-            'props',
-            'getStores',
-            'calculateState',
-            'state',
-            'constructor',
-            'getDefaultProps',
-            'getInitialState',
-            'getChildContext',
-            'componentWillMount',
-            'componentDidMount',
-            'componentWillReceiveProps',
-            'shouldComponentUpdate',
-            'componentWillUpdate',
-            'componentDidUpdate',
-            'componentWillUnmount'
-          ]
-        }
+        ]
       }
     ],
     // propTypes の定義をアルファベット順に制限
