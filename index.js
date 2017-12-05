@@ -495,6 +495,9 @@ module.exports = {
     // identifier の形式を制限
     // http://eslint.org/docs/rules/id-match
     'id-match': 0,
+    // Arrow関数の本体の改行ルール
+    // https://eslint.org/docs/rules/implicit-arrow-linebreak
+    'implicit-arrow-linebreak': [2, 'beside'],
     // インデントスタイル
     // http://eslint.org/docs/rules/indent
     'indent': [2, 2, {'MemberExpression': 1, 'SwitchCase': 1}],  // プロパティアクセスのインデントを指定
