@@ -650,7 +650,7 @@ module.exports = {
     'sort-imports': 0,  // 期待するソートじゃない
     // オブジェクトプロパティををアルファベット順に制限
     // http://eslint.org/docs/rules/sort-keys
-    'sort-keys': [2, 'asc', {'caseSensitive': true, 'natural': false}],
+    'sort-keys': [2, 'asc', {'caseSensitive': true, 'natural': true}],
     // 変数定義をアルファベット順に制限
     // http://eslint.org/docs/rules/sort-vars
     'sort-vars': 2,
