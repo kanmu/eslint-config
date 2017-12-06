@@ -70,7 +70,7 @@ module.exports = {
     'flowtype/require-return-type': 0,  // flow側にまかせたいときがある
     // flow annotationを強制
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/require-valid-file-annotation': 2,
+    'flowtype/require-valid-file-annotation': [2, 'always'],
     // 変数の型付けを強制
     // https://github.com/gajus/eslint-plugin-flowtype#require-variable-type
     'flowtype/require-variable-type': 0,  // flow側にまかせたいときがある
