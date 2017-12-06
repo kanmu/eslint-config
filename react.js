@@ -14,6 +14,22 @@ module.exports = {
     /**
      * Best Practices
      */
+    // Reactのlifecycle系はstaticだと動かないので除外する
+    'class-methods-use-this': [2, {
+      exceptMethods: [
+        'render',
+        'getInitialState',
+        'getDefaultProps',
+        'getChildContext',
+        'componentWillMount',
+        'componentDidMount',
+        'componentWillReceiveProps',
+        'shouldComponentUpdate',
+        'componentWillUpdate',
+        'componentDidUpdate',
+        'componentWillUnmount',
+      ]
+    }],
     // 不正な this 禁止
     // http://eslint.org/docs/rules/no-invalid-this
     'no-invalid-this': 0, // ES7 Property Initializers の関数をうまく判定できない
