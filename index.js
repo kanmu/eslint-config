@@ -13,6 +13,9 @@ module.exports = {
     // ケツカンマスタイル
     // http://eslint.org/docs/rules/comma-dangle
     'comma-dangle': 2,
+    // for文の比較と更新方向の相違を指摘
+    // https://eslint.org/docs/rules/for-direction
+    'for-direction': 2,
     // ループ内でのawait禁止
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 2,
@@ -401,6 +404,9 @@ module.exports = {
     // callback のエラーハンドリング強制
     // http://eslint.org/docs/rules/handle-callback-err
     'handle-callback-err': 2,
+    // 非推奨のBufferコンストラク使用禁止
+    // https://eslint.org/docs/rules/no-buffer-constructor
+    'no-buffer-constructor': 2,
     // require 内のモジュール形式 / 通常変数の混在禁止
     // http://eslint.org/docs/rules/no-mixed-requires
     'no-mixed-requires': [2, {'grouping': true}],
@@ -426,9 +432,15 @@ module.exports = {
     /**
      * Stylistic Issues
      */
+    // 配列括弧の改行スタイル
+    // https://eslint.org/docs/rules/array-bracket-newline
+    'array-bracket-newline': 0,  // 行の長さによって改行要否を変えたりしたい
     // 配列括弧の空白スタイル
     // http://eslint.org/docs/rules/array-bracket-spacing
     'array-bracket-spacing': 2,
+    // 配列要素の改行スタイル
+    // https://eslint.org/docs/rules/array-element-newline
+    'array-element-newline': 0,  // 行の長さによって改行要否を変えたりしたい
     // 1行ブロック内の空白スタイル
     // http://eslint.org/docs/rules/block-spacing
     'block-spacing': 0,  // brace-style で 1 行ブロックを制限しているため不要
@@ -479,7 +491,7 @@ module.exports = {
     'id-match': 0,
     // インデントスタイル
     // http://eslint.org/docs/rules/indent
-    'indent': [2, 2, {'MemberExpression': 1}],  // プロパティアクセスのインデントを指定
+    'indent': [2, 2, {'MemberExpression': 1, 'SwitchCase': 1}],  // プロパティアクセスのインデントを指定
     // JSX 属性のクオートスタイル
     // http://eslint.org/docs/rules/jsx-quotes
     'jsx-quotes': 0,  // kanmu/react 側で有効化
@@ -498,9 +510,6 @@ module.exports = {
     // コメントまわりの改行スタイル
     // http://eslint.org/docs/rules/lines-around-comment
     'lines-around-comment': [2, {'beforeBlockComment': true, 'allowBlockStart': true, 'allowObjectStart': true, 'allowArrayStart': true}],
-    // ディレクティブ(ex. "use strict")前後の空白スタイル
-    // http://eslint.org/docs/rules/lines-around-directive
-    'lines-around-directive': [2, 'always'],
     // 1ファイルの最大行を制限
     // http://eslint.org/docs/rules/max-lines
     'max-lines': 0,
@@ -519,12 +528,6 @@ module.exports = {
     // new 時の括弧必須化
     // http://eslint.org/docs/rules/new-parens
     'new-parens': 2,
-    // var, let, const 後の空行
-    // http://eslint.org/docs/rules/newline-after-var
-    'newline-after-var': 0,
-    // returnの前に空行を必須化
-    // http://eslint.org/docs/rules/newline-before-return
-    'newline-before-return': 0,
     // 1行あたりのchain呼出回数を制限
     // http://eslint.org/docs/rules/newline-per-chained-call
     'newline-per-chained-call': [0, {'ignoreChainWithDepth': 3}], // moment等まとまったほうが嬉しいパターンもあるので無効 / 1行に3つ以上のchainを警告
@@ -606,6 +609,9 @@ module.exports = {
     // ブロック先頭末尾の空白行
     // http://eslint.org/docs/rules/padded-blocks
     'padded-blocks': [2, 'never'],
+    // 特定の文の前後の改行スタイル
+    // https://eslint.org/docs/rules/padding-line-between-statements
+    'padding-line-between-statements': [2, {'blankLine': 'always', 'next': '*', 'prev': 'directive'}],  // "use strict" の後に改行
     // プロパティキー定義のクォート
     // http://eslint.org/docs/rules/quote-props
     'quote-props': [2, 'as-needed', {'keywords': true}],
@@ -621,6 +627,9 @@ module.exports = {
     // セミコロンまわりの空白スタイル
     // http://eslint.org/docs/rules/semi-spacing
     'semi-spacing': [2, {'before': false, 'after': true}],
+    // セミコロンの位置スタイル
+    // https://eslint.org/docs/rules/semi-style
+    'semi-style': 2,
     // importをアルファベット順に制限
     // http://eslint.org/docs/rules/sort-imports
     'sort-imports': 0,  // 期待するソートじゃない
@@ -648,6 +657,9 @@ module.exports = {
     // コメント内の空白
     // http://eslint.org/docs/rules/spaced-comment
     'spaced-comment': [2, 'always', {'exceptions': ['-', '+'], 'block': {'balanced': true}}],
+    // switch文のコロンの前後空白スタイル
+    // https://eslint.org/docs/rules/switch-colon-spacing
+    'switch-colon-spacing': 2,
     // タグ付きテンプレート式の空白ルール
     // https://eslint.org/docs/rules/template-tag-spacing
     'template-tag-spacing': [2, 'never'],
