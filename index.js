@@ -16,6 +16,9 @@ module.exports = {
     // ループ内でのawait禁止
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 2,
+    // マイナスゼロとの比較禁止
+    // https://eslint.org/docs/rules/no-compare-neg-zero
+    'no-compare-neg-zero': 2,
     // 評価文内の変数代入禁止
     // http://eslint.org/docs/rules/no-cond-assign
     'no-cond-assign': 2,
@@ -576,6 +579,9 @@ module.exports = {
     // オブジェクトプロパティアクセスのドット前の空白を禁止
     // http://eslint.org/docs/rules/no-whitespace-before-property
     'no-whitespace-before-property': 2,
+    // 本文がブロックではない制御構文の本文の位置ルール
+    // https://eslint.org/docs/rules/nonblock-statement-body-position
+    'nonblock-statement-body-position': 2,
     // オブジェクトリテラル括弧内の改行スタイル
     // http://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': [0, {'minProperties': 3, 'multiline': true}],  // 3属性以上で改行必須、指定要素数以内でも改行したくない場合があるのでしばらく無視する
