@@ -20,8 +20,15 @@ module.exports = {
     'ReactComponent': true,
     'ReactElement': true
   },
-  'plugins': ['flowtype'],
+  'plugins': ['flowtype', 'import'],
   'rules': {
+    // flowの`import type {..} form './foo'`を考慮してくれる
+    'no-duplicate-imports': 0,
+    'import/no-duplicates': 2,
+
+    /**
+     * Flow
+     */
     // boolean typeのスタイル
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/boolean-style': [2, 'boolean'],
