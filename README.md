@@ -13,7 +13,7 @@ ESLint configurations for Kanmu.
 ## Installation
 
 ```
-npm install --save-dev eslint eslint-config-kanmu eslint-plugin-sorting
+npm install --save-dev eslint eslint-config-kanmu
 ```
 
 ## Usage
@@ -95,7 +95,7 @@ extends:
 ##### Additional Requirements
 
 ```
-npm install --save-dev eslint-plugin-flowtype eslint-plugin-jsdoc eslint-plugin-react eslint-plugin-react-native
+npm install --save-dev eslint-plugin-flowtype eslint-plugin-jsdoc eslint-plugin-react eslint-plugin-react-native eslint-plugin-import
 ```
 
 
