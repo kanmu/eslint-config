@@ -74,6 +74,7 @@ module.exports = {
     // 複数行JSXの閉じタグの位置を強制
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
     'react/jsx-closing-tag-location': 2,
+    // propsやchildrenの中括弧スタイル
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
     'react/jsx-curly-brace-presence': [2, {'children': 'never', 'props': 'never'}],
     // 属性式内のスペーススタイル
