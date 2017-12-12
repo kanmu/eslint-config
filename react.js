@@ -149,7 +149,7 @@ module.exports = {
     // 括弧のない複数行の JSX を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
     'react/jsx-wrap-multilines': 2,
-    // setState内でのthis.stateの仕様を禁止
+    // setState内でのthis.stateの使用を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
     'react/no-access-state-in-setstate': 2,
     // children propsを禁止
