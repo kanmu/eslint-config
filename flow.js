@@ -22,6 +22,10 @@ module.exports = {
   },
   'plugins': ['flowtype', 'import'],
   'rules': {
+    // 関数の括弧まわりの改行スタイル
+    // https://eslint.org/docs/rules/function-paren-newline
+    'function-paren-newline': [2, 'consistent'],  // 引数の型を含めると可読性のため引数1つでも改行したくなる場合がある
+
     // flowの`import type {..} form './foo'`を考慮してくれる
     'no-duplicate-imports': 0,
     'import/no-duplicates': 2,
