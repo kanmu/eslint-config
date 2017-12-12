@@ -35,6 +35,9 @@ module.exports = extend(true, {}, base, {
     /**
      * Stylistic Issues
      */
+    // ケツカンマスタイル
+    // http://eslint.org/docs/rules/comma-dangle
+    'comma-dangle': 2,  // ES5の場合はbabeらない場合が多いのでケツカンマを許可しない
     // 関数名を持たせるための function 式を強制
     // http://eslint.org/docs/rules/func-names
     'func-names': 0,

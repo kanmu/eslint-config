@@ -12,7 +12,7 @@ module.exports = {
      */
     // ケツカンマスタイル
     // http://eslint.org/docs/rules/comma-dangle
-    'comma-dangle': 2,
+    'comma-dangle': [2, 'always-multiline'],
     // for文の比較と更新方向の相違を指摘
     // https://eslint.org/docs/rules/for-direction
     'for-direction': 2,
