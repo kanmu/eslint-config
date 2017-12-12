@@ -124,7 +124,7 @@ module.exports = {
     'react/no-redundant-should-component-update': 2,
     // JSX内での生文字列使用を禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
-    'react/jsx-no-literals': 2,  // childrenに文字列そのまま使えないのはつらそう
+    'react/jsx-no-literals': 0,  // childrenに文字列そのまま使えないのはつらそう
     // target='_blank'の禁止
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
     'react/jsx-no-target-blank': 2,
