@@ -35,6 +35,9 @@ module.exports = extend(true, {}, base, {
     /**
      * Stylistic Issues
      */
+    // ケツカンマスタイル
+    // http://eslint.org/docs/rules/comma-dangle
+    'comma-dangle': 2,  // ES5の場合はbabeらない場合が多いのでケツカンマを許可しない
     // 関数名を持たせるための function 式を強制
     // http://eslint.org/docs/rules/func-names
     'func-names': 0,
@@ -97,6 +100,9 @@ module.exports = extend(true, {}, base, {
     // const の利用提案
     // http://eslint.org/docs/rules/prefer-const
     'prefer-const': 0,
+    // 分割代入の利用提案
+    // https://eslint.org/docs/rules/prefer-destructuring
+    'prefer-destructuring': 0,
     // 定数値のparseIntで数値リテラルの利用を提案
     // http://eslint.org/docs/rules/prefer-numeric-literals
     'prefer-numeric-literals': 0,

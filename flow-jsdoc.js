@@ -26,6 +26,9 @@ module.exports = {
     // https://github.com/gajus/eslint-plugin-jsdoc#require-description-complete-sentence
     // descriptionを文章形式にすることを強制
     'jsdoc/require-description-complete-sentence': 0,
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-example
+    // @exampleを強制
+    'jsdoc/require-example': 0,
     // https://github.com/gajus/eslint-plugin-jsdoc#require-hyphen-before-param-description
     // @paramの説明の前にハイフンを強制
     'jsdoc/require-hyphen-before-param-description': 2,
@@ -35,6 +38,9 @@ module.exports = {
     // https://github.com/gajus/eslint-plugin-jsdoc#require-param-description
     // @paramにdescriptionを強制
     'jsdoc/require-param-description': 2,
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-param-name
+    // @paramにnameを強制
+    'jsdoc/require-param-name': 2,
     // https://github.com/gajus/eslint-plugin-jsdoc#require-param-type
     // @paramにtypeを強制
     'jsdoc/require-param-type': 0,
