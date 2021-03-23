@@ -83,7 +83,7 @@ module.exports = {
     'flowtype/semi': [2, 'always'],
     // プロパティの並び順
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/sort-keys': [2, 'asc', {'caseSensitive': true, 'natural': true}],
+    'flowtype/sort-keys': [2, 'asc'],
     // コロン後の空白スタイル
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/space-after-type-colon': [2, 'always'],
