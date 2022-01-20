@@ -2,7 +2,7 @@ var extend = require('extend');
 var react = require('./react');
 
 module.exports = extend(true, {}, react, {
-  'plugins': ['react', 'react-native'],
+  'plugins': ['react', 'react-hooks', 'react-native'],
   'env': {
     'browser': true,
     'node': true

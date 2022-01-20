@@ -7,8 +7,8 @@ module.exports = {
       'jsx': true
     }
   },
-  // npm install eslint-plugin-react
-  'plugins': ['react'],
+  // npm install eslint-plugin-react eslint-plugin-react-hooks
+  'plugins': ['react', 'react-hooks'],
 
   'rules': {
     /**
@@ -248,6 +248,14 @@ module.exports = {
     'react/sort-prop-types': 2,
     // style propsをObjectに強制
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
-    'react/style-prop-object': 2
+    'react/style-prop-object': 2,
+
+    /**
+     * React Hooks
+     */
+    // https://github.com/facebook/react/blob/05a55a4b09b7b7c8f63778fb8252a001ca66f8d7/packages/eslint-plugin-react-hooks/src/RulesOfHooks.js
+    'react-hooks/rules-of-hooks': 2,
+    // https://github.com/facebook/react/blob/05a55a4b09b7b7c8f63778fb8252a001ca66f8d7/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
+    'react-hooks/exhaustive-deps': 2
   }
 };
