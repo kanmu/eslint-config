@@ -608,7 +608,7 @@ module.exports = {
     'object-curly-spacing': [2, 'never'],
     // オブジェクトプロパティ毎の改行を強制する
     // http://eslint.org/docs/rules/object-property-newline
-    'object-property-newline': [2, {'allowMultiplePropertiesPerLine': true}],  // 1行に全てのプロパティが収まる場合は許可
+    'object-property-newline': [2, {'allowAllPropertiesOnSameLine': true}],  // 1行に全てのプロパティが収まる場合は許可
     // 変数定義初期化スタイル
     // http://eslint.org/docs/rules/one-var
     'one-var': [2, {'uninitialized': 'always', 'initialized': 'never'}],  // 値なしで初期化する場合はvarを1つにまとめ、値ありで初期化する場合はvarを変数分
