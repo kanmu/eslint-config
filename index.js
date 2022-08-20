@@ -128,7 +128,7 @@ module.exports = {
     'valid-typeof': 2,
 
     /**
-     * Best Practices
+     * Suggestions
      */
     // getter / setter の組み合わせを強制
     // http://eslint.org/docs/rules/accessor-pairs
