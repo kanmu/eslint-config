@@ -370,9 +370,6 @@ module.exports = {
     // 変数定義のスタイル
     // http://eslint.org/docs/rules/init-declarations
      'init-declarations': 2,
-    // catch 句のパラメータに同名変数使用禁止
-    // http://eslint.org/docs/rules/no-catch-shadow
-    'no-catch-shadow': 2,
     // オブジェクトプロパティ以外への delete 禁止
     // http://eslint.org/docs/rules/no-delete-var
     'no-delete-var': 2,
