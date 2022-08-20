@@ -166,6 +166,12 @@ module.exports = {
     // for-in ループで prototype チェーンのキーの使用防止
     // http://eslint.org/docs/rules/guard-for-in
     'guard-for-in': 0,
+    // 1ファイルあたりの最大クラス数を制限
+    // https://eslint.org/docs/rules/max-classes-per-file
+    'max-classes-per-file': 0,
+    // 1関数あたりの最大行数を制限
+    // https://eslint.org/docs/rules/max-lines-per-function
+    'max-lines-per-function': 0,
     // alert 禁止
     // http://eslint.org/docs/rules/no-alert
     'no-alert': 2,
@@ -329,6 +335,9 @@ module.exports = {
     // with 禁止
     // http://eslint.org/docs/rules/no-with
     'no-with': 2,
+    // Object.assign -> spread構文の使用推奨
+    // https://eslint.org/docs/rules/prefer-object-spread
+    'prefer-object-spread': 2,
     // Promiseのreject時にErrorの使用推奨
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
     'prefer-promise-reject-errors': 2,
