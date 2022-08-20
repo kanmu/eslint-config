@@ -2,6 +2,7 @@ module.exports = {
   'parserOptions': {
     'sourceType': 'module'
   },
+  'plugins': ['jsdoc'],
   'env': {
     'es6': true
   },
@@ -118,20 +119,6 @@ module.exports = {
     // isNaN() の使用強制
     // http://eslint.org/docs/rules/use-isnan
     'use-isnan': 2,
-    // 不正な JSDoc を禁止
-    // http://eslint.org/docs/rules/valid-jsdoc
-    'valid-jsdoc': [2, {
-      'preferType': {
-        'Boolean': 'boolean',
-        'function': 'Function',
-        'Number': 'number',
-        'object': 'Object',
-        'String': 'string',
-        'Symbol': 'symbol'
-      },
-      'requireReturn': false,
-      'requireReturnDescription': false
-    }],
     // 不正な type 文字列を禁止
     // http://eslint.org/docs/rules/valid-typeof
     'valid-typeof': 2,
@@ -651,9 +638,6 @@ module.exports = {
     // 文字列のクォート
     // http://eslint.org/docs/rules/quotes
     'quotes': [2, 'single'],
-    // JSDoc 強制
-    // http://eslint.org/docs/rules/require-jsdoc
-    'require-jsdoc': [2, {'require': {'ArrowFunctionExpression': true, 'FunctionDeclaration': true, 'FunctionExpression': true, 'MethodDefinition': true, 'ClassDeclaration': true}}],
     // セミコロン強制
     // http://eslint.org/docs/rules/semi
     'semi': 2,
@@ -814,6 +798,60 @@ module.exports = {
     'no-bitwise': 2,
     // ++ / -- 禁止
     // http://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 0
+    'no-plusplus': 0,
+
+    /**
+     * jsdoc
+     */
+    // @paramと引数名の一致を確認
+    // https://github.com/gajus/eslint-plugin-jsdoc#check-param-names
+    'jsdoc/check-param-names': 2,
+    // タグの名前(@param, @returns, etc...)が正しいか確認
+    // https://github.com/gajus/eslint-plugin-jsdoc#check-tag-names
+    'jsdoc/check-tag-names': 2,
+    // 型名(number, string, etc...)が正しいか確認
+    // https://github.com/gajus/eslint-plugin-jsdoc#check-types
+    'jsdoc/check-types': 2,
+    // descriptionのあとに改行を強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#newline-after-description
+    'jsdoc/newline-after-description': 2,
+    // descriptionを文章形式にすることを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-description-complete-sentence
+    'jsdoc/require-description-complete-sentence': 0,
+    // @exampleを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-example
+    'jsdoc/require-example': 0,
+    // @paramの説明の前にハイフンを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-hyphen-before-param-description
+    'jsdoc/require-hyphen-before-param-description': 2,
+    // JSDocを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-jsdoc
+    'jsdoc/require-jsdoc': 2,
+    // @paramを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-param
+    'jsdoc/require-param': 2,
+    // @paramにdescriptionを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-param-description
+    'jsdoc/require-param-description': 2,
+    // @paramにnameを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-param-name
+    'jsdoc/require-param-name': 2,
+    // @paramにtypeを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-param-type
+    'jsdoc/require-param-type': 2,
+    // @returnsにdescriptionを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-returns-description
+    'jsdoc/require-returns-description': 2,
+    // @returnsにtypeを強制
+    // https://github.com/gajus/eslint-plugin-jsdoc#require-returns-type
+    'jsdoc/require-returns-type': 2
+  },
+  'settings': {
+    'jsdoc': {
+      // タグ名のエイリアスを定義
+      'tagNamePreference': {
+        'returns': 'return'
+      }
+    }
   }
 };
