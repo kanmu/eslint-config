@@ -19,6 +19,9 @@ module.exports = {
     // returnしないコードパスを持つGetterを指摘
     // https://eslint.org/docs/rules/getter-return
     'getter-return': 2,
+    // Promiseコンストラクタにasync関数を渡すことを禁止
+    // https://eslint.org/docs/rules/no-async-promise-executor
+    'no-async-promise-executor': 2,
     // ループ内でのawait禁止
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 2,
@@ -79,6 +82,9 @@ module.exports = {
     // イレギュラーな空白禁止
     // http://eslint.org/docs/rules/no-irregular-whitespace
     'no-irregular-whitespace': [2, {'skipRegExps': true, 'skipStrings': true}],  // 正規表現とテンプレートリテラル内は許容する
+    // 複数コードポイントによって構成される文字を正規表現の文字クラス構文で利用することを禁止
+    // https://eslint.org/docs/rules/no-misleading-character-class
+    'no-misleading-character-class': 2,
     // 意図しないNOT演算子を禁止
     // http://eslint.org/docs/rules/no-unsafe-negation
     'no-unsafe-negation': 2,
@@ -106,6 +112,9 @@ module.exports = {
     // finally内でのreturn, throw, break, continueを禁止
     // http://eslint.org/docs/rules/no-unsafe-finally
     'no-unsafe-finally': 2,
+    // await / yield で起こり得るアトミックでない変数の書き換えを禁止
+    // https://eslint.org/docs/rules/require-atomic-updates
+    'require-atomic-updates': 2,
     // isNaN() の使用強制
     // http://eslint.org/docs/rules/use-isnan
     'use-isnan': 2,
@@ -347,6 +356,9 @@ module.exports = {
     // awaitのないasync関数禁止
     // https://eslint.org/docs/rules/require-await
     'require-await': 2,
+    // 正規表現にuフラグをつけることを強制
+    // https://eslint.org/docs/rules/require-unicode-regexp
+    'require-unicode-regexp': 2,
     // var をスコープ最上部に強制
     // http://eslint.org/docs/rules/vars-on-top
     'vars-on-top': 0,
