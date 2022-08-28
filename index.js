@@ -77,6 +77,9 @@ module.exports = {
     // top-level 以外の関数定義禁止 (ES2015 or later)
     // http://eslint.org/docs/rules/no-inner-declarations
     'no-inner-declarations': 2,
+    // importしてきた変数への代入禁止
+    // https://eslint.org/docs/rules/no-import-assign
+    'no-import-assign': 2,
     // 不正な正規表現を禁止
     // http://eslint.org/docs/rules/no-invalid-regexp
     'no-invalid-regexp': 2,
@@ -150,6 +153,9 @@ module.exports = {
     // switch 文の default を強制
     // http://eslint.org/docs/rules/default-case
     'default-case': 2,
+    // デフォルトパラメータ構文は最後に使うよう強制
+    // https://eslint.org/docs/rules/default-param-last
+    'default-param-last': 2,
     // 改行時のドットの位置を強制
     // http://eslint.org/docs/rules/dot-location
     'dot-location': [2, 'property'],  // プロパティと同じ行
@@ -343,6 +349,9 @@ module.exports = {
     // Promiseのreject時にErrorの使用推奨
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
     'prefer-promise-reject-errors': 2,
+    // 静的に内容が決まる場合は正規表現リテラルの使用推奨
+    // https://eslint.org/docs/rules/prefer-regex-literals
+    'prefer-regex-literals': [2, {'disallowRedundantWrapping': true}], // 不必要にwrapされた正規表現リテラルも対象にする
     // parseInt() の基数パラメータ必須化
     // http://eslint.org/docs/rules/radix
     'radix': 2,
