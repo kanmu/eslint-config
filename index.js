@@ -334,6 +334,9 @@ module.exports = {
     // with 禁止
     // http://eslint.org/docs/rules/no-with
     'no-with': 2,
+    // 正規表現で名前付きキャプチャーグループの使用推奨
+    // https://eslint.org/docs/rules/prefer-named-capture-group
+    'prefer-named-capture-group': 2,
     // Object.assign -> spread構文の使用推奨
     // https://eslint.org/docs/rules/prefer-object-spread
     'prefer-object-spread': 2,
