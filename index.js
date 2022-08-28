@@ -38,6 +38,9 @@ module.exports = {
     // 条件としての定数使用禁止
     // http://eslint.org/docs/rules/no-constant-condition
     'no-constant-condition': [2, {'checkLoops': false}],  // 無限ループ用は許容
+    // constructorでのreturn禁止
+    // https://eslint.org/docs/rules/no-constructor-return
+    'no-constructor-return': 2,
     // 正規表現内の不可視範囲 ASCII コントロール文字使用禁止
     // http://eslint.org/docs/rules/no-control-regex
     'no-control-regex': 2,
@@ -47,6 +50,9 @@ module.exports = {
     // 引数名重複禁止
     // http://eslint.org/docs/rules/no-dupe-args
     'no-dupe-args': 2,
+    // else-if文で常にfalseになる重複した条件式を禁止
+    // https://eslint.org/docs/rules/no-dupe-else-if
+    'no-dupe-else-if': 2,
     // キー名重複禁止
     // http://eslint.org/docs/rules/no-dupe-keys
     'no-dupe-keys': 2,
@@ -101,6 +107,9 @@ module.exports = {
     // 正規表現内の連続空白禁止
     // http://eslint.org/docs/rules/no-regex-spaces
     'no-regex-spaces': 2,
+    // setterでのreturn文禁止
+    // https://eslint.org/docs/rules/no-setter-return
+    'no-setter-return': 2,
     // 要素のないカンマのみの配列禁止
     // http://eslint.org/docs/rules/no-sparse-arrays
     'no-sparse-arrays': 2,
@@ -165,6 +174,9 @@ module.exports = {
     // ===, !== 必須化
     // http://eslint.org/docs/rules/eqeqeq
     'eqeqeq': 2,
+    // setter/getterを定義する場合は隣り合った位置に定義する
+    // https://eslint.org/docs/rules/grouped-accessor-pairs
+    'grouped-accessor-pairs': 2,
     // for-in ループで prototype チェーンのキーの使用防止
     // http://eslint.org/docs/rules/guard-for-in
     'guard-for-in': 0,
@@ -340,6 +352,9 @@ module.exports = {
     // with 禁止
     // http://eslint.org/docs/rules/no-with
     'no-with': 2,
+    // Math.powより**の使用推奨
+    // https://eslint.org/docs/rules/prefer-exponentiation-operator
+    'prefer-exponentiation-operator': 2,
     // 正規表現で名前付きキャプチャーグループの使用推奨
     // https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 2,
@@ -743,7 +758,7 @@ module.exports = {
     'no-this-before-super': 2,
     // 不要なcomputed propertiesを禁止
     // http://eslint.org/docs/rules/no-useless-computed-key
-    'no-useless-computed-key': 2,
+    'no-useless-computed-key': [2, {'enforceForClassMembers': true}],  // class内のcomputed keyについてもチェックする
     // 不要なコンストラクタ関数の禁止
     // http://eslint.org/docs/rules/no-useless-constructor
     'no-useless-constructor': 2,
