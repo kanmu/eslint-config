@@ -91,7 +91,7 @@ module.exports = {
     'no-misleading-character-class': 2,
     // 意図しないNOT演算子を禁止
     // http://eslint.org/docs/rules/no-unsafe-negation
-    'no-unsafe-negation': 2,
+    'no-unsafe-negation': [2, {'enforceForOrderingRelations': true}],  // 比較演算子の左辺を対象とする否定演算子も禁止
     // Math, JSON の関数呼び出し禁止
     // http://eslint.org/docs/rules/no-obj-calls
     'no-obj-calls': 2,
