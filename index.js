@@ -286,9 +286,6 @@ module.exports = {
     // 引数への再代入禁止
     // http://eslint.org/docs/rules/no-param-reassign
     'no-param-reassign': [2, {'props': true}],
-    // process.env 禁止
-    // http://eslint.org/docs/rules/no-process-env
-    'no-process-env': 0,
     // __proto__ 禁止
     // http://eslint.org/docs/rules/no-proto
     'no-proto': 2,
@@ -429,43 +426,6 @@ module.exports = {
     // 定義前変数の使用禁止
     // http://eslint.org/docs/rules/no-use-before-define
     'no-use-before-define': [2, 'nofunc'],  // 関数の場合は hoisting 有効
-
-    /**
-     * Node.js
-     */
-    // callback の return 強制
-    // http://eslint.org/docs/rules/callback-return
-    'callback-return': 2,
-    // top-level 以外での require を禁止
-    // http://eslint.org/docs/rules/global-require
-    'global-require': 2,
-    // callback のエラーハンドリング強制
-    // http://eslint.org/docs/rules/handle-callback-err
-    'handle-callback-err': 2,
-    // 非推奨のBufferコンストラク使用禁止
-    // https://eslint.org/docs/rules/no-buffer-constructor
-    'no-buffer-constructor': 2,
-    // require 内のモジュール形式 / 通常変数の混在禁止
-    // http://eslint.org/docs/rules/no-mixed-requires
-    'no-mixed-requires': [2, {'grouping': true}],
-    // new require の禁止
-    // http://eslint.org/docs/rules/no-new-require
-    'no-new-require': 2,
-    // __dirname / __filename の直接連結禁止
-    // http://eslint.org/docs/rules/no-path-concat
-    'no-path-concat': 2,
-    // process.exit 禁止
-    // http://eslint.org/docs/rules/no-process-exit
-    'no-process-exit': 2,
-    // 制限モジュールの使用禁止 (module構文)
-    // http://eslint.org/docs/rules/no-restricted-imports
-    'no-restricted-imports': 0,
-    // 制限モジュールの使用禁止 (require関数)
-    // http://eslint.org/docs/rules/no-restricted-modules
-    'no-restricted-modules': 0,
-    // 同期メソッド禁止
-    // http://eslint.org/docs/rules/no-sync
-    'no-sync': 0,
 
     /**
      * Stylistic Issues
@@ -617,6 +577,9 @@ module.exports = {
     // Object コンストラクタ禁止
     // http://eslint.org/docs/rules/no-new-object
     'no-new-object': 2,
+    // 制限モジュールの使用禁止 (module構文)
+    // http://eslint.org/docs/rules/no-restricted-imports
+    'no-restricted-imports': 0,
     // 制限された構文を禁止
     // http://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': 0,  // no-with, func-style で同様の制限をしているので無視
