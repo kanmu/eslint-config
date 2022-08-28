@@ -494,6 +494,9 @@ module.exports = {
     // 関数定義スタイル
     // http://eslint.org/docs/rules/func-style
     'func-style': [2, 'declaration', {allowArrowFunctions: true}],
+    // 関数の引数間の開改行スタイル
+    // https://eslint.org/docs/rules/function-call-argument-newline
+    'function-call-argument-newline': [2, 'consistent'],
     // 関数の括弧まわりの改行スタイル
     // https://eslint.org/docs/rules/function-paren-newline
     'function-paren-newline': [2, 'multiline'],
