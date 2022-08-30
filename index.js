@@ -292,6 +292,9 @@ module.exports = {
     // String, Number, Boolean のプリミティブ値での new 禁止
     // http://eslint.org/docs/rules/no-new-wrappers
     'no-new-wrappers': 2,
+    // 8進数エスケープシーケンスの禁止
+    // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
+    'no-nonoctal-decimal-escape': 2,
     // 8 進数リテラル禁止
     // http://eslint.org/docs/rules/no-octal
     'no-octal': 2,
