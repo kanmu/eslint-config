@@ -70,7 +70,7 @@ module.exports = {
     'no-ex-assign': 2,
     // 条件評価用途での余分な !! キャスト禁止
     // http://eslint.org/docs/rules/no-extra-boolean-cast
-    'no-extra-boolean-cast': 2,
+    'no-extra-boolean-cast': [2, {'enforceForLogicalOperands': true}], // 論理式まわりの不要なキャストも禁止
     // 余分な括弧を禁止
     // http://eslint.org/docs/rules/no-extra-parens
     'no-extra-parens': [2, 'functions'],
@@ -125,6 +125,9 @@ module.exports = {
     // finally内でのreturn, throw, break, continueを禁止
     // http://eslint.org/docs/rules/no-unsafe-finally
     'no-unsafe-finally': 2,
+    // 正規表現中の無意味な後方参照を禁止
+    // https://eslint.org/docs/rules/no-useless-backreference
+    'no-useless-backreference': 2,
     // await / yield で起こり得るアトミックでない変数の書き換えを禁止
     // https://eslint.org/docs/rules/require-atomic-updates
     'require-atomic-updates': 2,
@@ -162,6 +165,9 @@ module.exports = {
     // switch 文の default を強制
     // http://eslint.org/docs/rules/default-case
     'default-case': 2,
+    // default句をswitch文の末尾に書くこと以外を禁止
+    // https://eslint.org/docs/rules/default-case-last
+    'default-case-last': 2,
     // デフォルトパラメータ構文は最後に使うよう強制
     // https://eslint.org/docs/rules/default-param-last
     'default-param-last': 2,
@@ -292,6 +298,9 @@ module.exports = {
     // 変数の再定義禁止
     // http://eslint.org/docs/rules/no-redeclare
     'no-redeclare': [2, {'builtinGlobals': true}],
+    // 特定の名前のES Modules exportsを禁止
+    // https://eslint.org/docs/rules/no-restricted-exports
+    'no-restricted-exports': 0,
     // 指定名称のプロパティアクセスを禁止
     // http://eslint.org/docs/rules/no-restricted-properties
     'no-restricted-properties': 0,
