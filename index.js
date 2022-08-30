@@ -35,6 +35,9 @@ module.exports = {
     // console 禁止
     // http://eslint.org/docs/rules/no-console
     'no-console': 1,
+    // 操作が値に影響しない式を禁止
+    // https://eslint.org/docs/rules/no-constant-binary-expression
+    'no-constant-binary-expression': 2,
     // 条件としての定数使用禁止
     // http://eslint.org/docs/rules/no-constant-condition
     'no-constant-condition': [2, {'checkLoops': false}],  // 無限ループ用は許容
