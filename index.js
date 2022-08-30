@@ -92,6 +92,9 @@ module.exports = {
     // イレギュラーな空白禁止
     // http://eslint.org/docs/rules/no-irregular-whitespace
     'no-irregular-whitespace': [2, {'skipRegExps': true, 'skipStrings': true}],  // 正規表現とテンプレートリテラル内は許容する
+    // number型が表現できない桁数の数値リテラルを禁止
+    // https://eslint.org/docs/rules/no-loss-of-precision
+    'no-loss-of-precision': 2,
     // 複数コードポイントによって構成される文字を正規表現の文字クラス構文で利用することを禁止
     // https://eslint.org/docs/rules/no-misleading-character-class
     'no-misleading-character-class': 2,
