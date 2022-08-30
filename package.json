@@ -29,6 +29,15 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-react-native": "^3.2.0"
   },
+  "peerDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-plugin-node": ">=11.1.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-node": {
+      "optional": true
+    }
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
