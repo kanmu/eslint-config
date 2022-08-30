@@ -137,6 +137,9 @@ module.exports = {
     // finally内でのreturn, throw, break, continueを禁止
     // http://eslint.org/docs/rules/no-unsafe-finally
     'no-unsafe-finally': 2,
+    // 未使用のprivate classメンバの禁止
+    // https://eslint.org/docs/rules/no-unused-private-class-members
+    'no-unused-private-class-members': 2,
     // 正規表現中の無意味な後方参照を禁止
     // https://eslint.org/docs/rules/no-useless-backreference
     'no-useless-backreference': 2,
