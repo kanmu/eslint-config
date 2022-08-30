@@ -251,7 +251,7 @@ module.exports = {
     'no-floating-decimal': 2,
     // 省略型キャスト表記禁止
     // http://eslint.org/docs/rules/no-implicit-coercion
-    'no-implicit-coercion': [2, {'allow': ['!!'], 'boolean': true, 'number': true, 'string': true}],
+    'no-implicit-coercion': [2, {'allow': ['!!'], 'boolean': true, 'number': true, 'string': true, 'disallowTemplateShorthand': true}],
     // 暗黙の eval 禁止
     // http://eslint.org/docs/rules/no-implied-eval
     'no-implied-eval': 2,
