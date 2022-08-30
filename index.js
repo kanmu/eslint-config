@@ -104,6 +104,9 @@ module.exports = {
     // Math, JSON の関数呼び出し禁止
     // http://eslint.org/docs/rules/no-obj-calls
     'no-obj-calls': 2,
+    // Promiseコンストラクタ内で値を返すreturnを禁止
+    // https://eslint.org/docs/rules/no-promise-executor-return
+    'no-promise-executor-return': 2,
     // Object.prototypeのメソッド利用禁止
     // http://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 2,
@@ -125,6 +128,9 @@ module.exports = {
     // 到達不能コード禁止
     // http://eslint.org/docs/rules/no-unreachable
     'no-unreachable': 2,
+    // ループしないループ構文を禁止
+    // https://eslint.org/docs/rules/no-unreachable-loop
+    'no-unreachable-loop': 2,
     // finally内でのreturn, throw, break, continueを禁止
     // http://eslint.org/docs/rules/no-unsafe-finally
     'no-unsafe-finally': 2,
