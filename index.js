@@ -345,7 +345,7 @@ module.exports = {
     'no-unmodified-loop-condition': 2,
     // 未使用の式禁止
     // http://eslint.org/docs/rules/no-unused-expressions
-    'no-unused-expressions': 2,
+    'no-unused-expressions': [2, {'enforceForJSX': true}],  // JSXにもルールを適用
     // 未使用ラベルの禁止
     // http://eslint.org/docs/rules/no-unused-labels
     'no-unused-labels': 2,
