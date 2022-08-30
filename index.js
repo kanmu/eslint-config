@@ -504,7 +504,7 @@ module.exports = {
     'function-paren-newline': [2, 'multiline'],
     // 変数名に使用禁止な名前リスト
     // http://eslint.org/docs/rules/id-blacklist
-    'id-blacklist': 0,
+    'id-denylist': 0,
     // identifier (変数, 引数, プロパティ) の長さを制限
     // http://eslint.org/docs/rules/id-length
     'id-length': 0,
