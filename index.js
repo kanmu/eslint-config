@@ -379,6 +379,9 @@ module.exports = {
     // Math.powより**の使用推奨
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
     'prefer-exponentiation-operator': 2,
+    // Object.hasOwnの使用推奨 (ES2022以降)
+    // https://eslint.org/docs/rules/prefer-object-has-own
+    'prefer-object-has-own': 2,
     // 正規表現で名前付きキャプチャーグループの使用推奨
     // https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 2,
