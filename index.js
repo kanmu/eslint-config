@@ -841,9 +841,6 @@ module.exports = {
     // 型名(number, string, etc...)が正しいか確認
     // https://github.com/gajus/eslint-plugin-jsdoc#check-types
     'jsdoc/check-types': 2,
-    // descriptionのあとに改行を強制
-    // https://github.com/gajus/eslint-plugin-jsdoc#newline-after-description
-    'jsdoc/newline-after-description': 2,
     // descriptionを文章形式にすることを強制
     // https://github.com/gajus/eslint-plugin-jsdoc#require-description-complete-sentence
     'jsdoc/require-description-complete-sentence': 0,
@@ -873,7 +870,14 @@ module.exports = {
     'jsdoc/require-returns-description': 2,
     // @returnsにtypeを強制
     // https://github.com/gajus/eslint-plugin-jsdoc#require-returns-type
-    'jsdoc/require-returns-type': 2
+    'jsdoc/require-returns-type': 2,
+    // タグ間の空行スタイル
+    // https://github.com/gajus/eslint-plugin-jsdoc/blob/main/.README/rules/tag-lines.md
+    'jsdoc/tag-lines': [
+      2,
+      'any',  // タグ間の空行スタイルを強制しない
+      {'startLines': 1}  // descriptionのあとに改行を強制
+    ]
   },
   'settings': {
     'jsdoc': {
