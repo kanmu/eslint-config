@@ -1,11 +1,7 @@
 # eslint-config-kanmu
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/kanmu/eslint-config.svg)](https://greenkeeper.io/)
-
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
-[![DevDependency Status][daviddm-dev-image]][daviddm-dev-url]
+[![Build Status][github-actions-image]][github-actions-url]
 [![License][license-image]][license-url]
 
 ESLint configurations for Kanmu.
@@ -101,11 +97,7 @@ npm install --save-dev eslint-plugin-flowtype eslint-plugin-jsdoc eslint-plugin-
 
 [npm-url]: https://www.npmjs.com/package/eslint-config-kanmu
 [npm-image]: https://img.shields.io/npm/v/eslint-config-kanmu.svg
-[travis-url]: https://travis-ci.org/kanmu/eslint-config
-[travis-image]: https://img.shields.io/travis/kanmu/eslint-config.svg
-[daviddm-url]: https://david-dm.org/kanmu/eslint-config
-[daviddm-image]: https://img.shields.io/david/kanmu/eslint-config.svg
-[daviddm-dev-url]: https://david-dm.org/kanmu/eslint-config#info=devDependencies
-[daviddm-dev-image]: https://img.shields.io/david/dev/kanmu/eslint-config.svg
+[github-actions-url]: https://github.com/kanmu/eslint-config/actions/workflows/ci.yml
+[github-actions-image]: https://github.com/kanmu/eslint-config/actions/workflows/ci.yml/badge.svg?branch=master
 [license-url]: http://opensource.org/licenses/MIT
 [license-image]: https://img.shields.io/npm/l/eslint-config-kanmu.svg
