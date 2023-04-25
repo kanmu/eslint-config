@@ -10,14 +10,14 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.0.3",
-    "eslint": "^4.12.1",
+    "eslint": "^8.23.0",
     "eslint-config-kanmu": "file:..",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsdoc": "^3.2.0",
-    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-jsdoc": "^41.0.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.5.1",
-    "eslint-plugin-react-native": "^3.1.0"
+    "eslint-plugin-react-native": "^4.0.0"
   },
   "private": true
 }
