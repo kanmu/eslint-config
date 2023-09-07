@@ -34,7 +34,7 @@ module.exports = {
     'no-cond-assign': 2,
     // console 禁止
     // http://eslint.org/docs/rules/no-console
-    'no-console': 1,
+    'no-console': 2,
     // 操作が値に影響しない式を禁止
     // https://eslint.org/docs/rules/no-constant-binary-expression
     'no-constant-binary-expression': 2,
@@ -173,7 +173,7 @@ module.exports = {
     'class-methods-use-this': 2,
     // 複雑度
     // http://eslint.org/docs/rules/complexity
-    'complexity': [1, 8],  // テスタブル JavaScript には 10 以下が適切とある
+    'complexity': [2, 8],  // テスタブル JavaScript には 10 以下が適切とある
     // 一貫性のある return 必須化
     // http://eslint.org/docs/rules/consistent-return
     'consistent-return': [2, {'treatUndefinedAsUnspecified': true}],  // undefinedを返す場合は省略可能
@@ -558,7 +558,7 @@ module.exports = {
     'max-lines': 0,
     // callback ネスト数の制限
     // http://eslint.org/docs/rules/max-nested-callbacks
-    'max-nested-callbacks': [1, 3],
+    'max-nested-callbacks': [2, 3],
     // 1行の文の数を制限
     // http://eslint.org/docs/rules/max-statements-per-line
     'max-statements-per-line': 0,  // ここまで厳密にしなくてもよさそう
@@ -812,16 +812,16 @@ module.exports = {
      */
     // ブロックのネスト数
     // http://eslint.org/docs/rules/max-depth
-    'max-depth': [1, 3],
+    'max-depth': [2, 3],
     // 1行の長さ
     // http://eslint.org/docs/rules/max-len
-    'max-len': [1, {'code': 100, 'tabWidth': 2, 'ignoreStrings': true, 'ignoreTemplateLiterals': true, 'ignoreUrls': true}],  // 文字列、テンプレートリテラル、URLは無視
+    'max-len': [2, {'code': 100, 'tabWidth': 2, 'ignoreStrings': true, 'ignoreTemplateLiterals': true, 'ignoreUrls': true}],  // 文字列、テンプレートリテラル、URLは無視
     // 引数の数
     // http://eslint.org/docs/rules/max-params
-    'max-params': [1, 3],
+    'max-params': [2, 3],
     // 関数内の文の数
     // http://eslint.org/docs/rules/max-statements
-    'max-statements': [1, 10],
+    'max-statements': [2, 10],
     // ビット演算子禁止
     // http://eslint.org/docs/rules/no-bitwise
     'no-bitwise': 2,
