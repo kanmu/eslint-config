@@ -1,11 +1,10 @@
-module.exports = {
-  'parserOptions': {
+import jsdocPlugin from 'eslint-plugin-jsdoc';
+
+export default [{
+  'languageOptions': {
     'sourceType': 'module'
   },
-  'plugins': ['jsdoc'],
-  'env': {
-    'es6': true
-  },
+  'plugins': {jsdoc: jsdocPlugin},
 
   'rules': {
     /**
@@ -887,4 +886,4 @@ module.exports = {
       }
     }
   }
-};
+}];
