@@ -1,6 +1,8 @@
-module.exports = {
-  'env': {
-    'browser': true,
-    'commonjs': true
+import globals from 'globals';
+
+export default [{
+  'languageOptions': {
+    'globals': globals.browser,
+    'sourceType': 'commonjs'
   }
-};
+}];
