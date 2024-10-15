@@ -1,5 +1,7 @@
-module.exports = {
-  'plugins': ['jsdoc'],
+import jsdocPlugin from 'eslint-plugin-jsdoc';
+
+export default [{
+  'plugins': {'jsdoc': jsdocPlugin},
   'rules': {
     /**
      * jsdoc
@@ -17,4 +19,4 @@ module.exports = {
     // https://github.com/gajus/eslint-plugin-jsdoc#require-returns-type
     'jsdoc/require-returns-type': 0
   }
-};
+}];
