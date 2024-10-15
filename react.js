@@ -1,14 +1,16 @@
-var extend = require('extend');
-var base = require('./');
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
-module.exports = {
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true
-    }
+export default [{
+  'languageOptions': {
+    'parserOptions': {
+      'ecmaFeatures': {
+        'jsx': true
+      }
+    },
   },
   // npm install eslint-plugin-react eslint-plugin-react-hooks
-  'plugins': ['react', 'react-hooks'],
+  'plugins': {'react': reactPlugin, 'react-hooks': reactHooksPlugin},
 
   'rules': {
     /**
@@ -257,5 +259,6 @@ module.exports = {
     'react-hooks/rules-of-hooks': 2,
     // https://github.com/facebook/react/blob/05a55a4b09b7b7c8f63778fb8252a001ca66f8d7/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
     'react-hooks/exhaustive-deps': 2
-  }
-};
+  },
+  'settings': {'react': {'version': 'detect'}}
+}];
