@@ -1,6 +1,8 @@
-module.exports = {
-  'env': {
-    'mocha': true
+import globals from 'globals';
+
+export default [{
+  'languageOptions': {
+    'globals': globals.mocha
   },
   'rules': {
     /**
@@ -31,4 +33,4 @@ module.exports = {
     // http://eslint.org/docs/rules/max-statements
     'max-statements': 0  // 必然的に多くなるので除外
   }
-}
+}];
