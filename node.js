@@ -1,8 +1,11 @@
-module.exports = {
-  'env': {
-    'node': true
+import globals from 'globals';
+import nodePlugin from 'eslint-plugin-node';
+
+export default [{
+  'languageOptions': {
+    'globals': globals.node
   },
-  'plugins': ['node'],
+  'plugins': {'node': nodePlugin},
   'rules': {
     // callback の return 強制
     // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/callback-return.md
@@ -62,4 +65,4 @@ module.exports = {
     // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/shebang.md
     'node/shebang': 2
   }
-};
+}];
