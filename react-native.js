@@ -1,15 +1,15 @@
-var extend = require('extend');
-var react = require('./react');
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import reactNativePlugin from 'eslint-plugin-react-native';
+import reactConfig from './react.js';
 
-module.exports = extend(true, {}, react, {
-  'plugins': ['react', 'react-hooks', 'react-native'],
-  'env': {
-    'browser': true,
-    'node': true
+export default [
+  ...reactConfig,
+  {
+  'languageOptions': {
+    'globals': reactNativePlugin.environments['react-native'].globals
   },
-  'globals': {
-    '__DEV__': true
-  },
+  'plugins': {'react': reactPlugin, 'react-hooks': reactHooksPlugin, 'react-native': reactNativePlugin},
   'rules': {
     /**
      * React Native
@@ -34,4 +34,4 @@ module.exports = extend(true, {}, react, {
     // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/split-platform-components.md
     'react-native/split-platform-components': 0  // 片方のみの場合は不要
   }
-});
+}];
