@@ -1,4 +1,16 @@
-module.exports = {
+import {fixupPluginRules} from '@eslint/compat';
+import flowtypePlugin from 'eslint-plugin-flowtype';
+import importPlugin from 'eslint-plugin-import';
+
+const fixupFlowtypePlugin = fixupPluginRules(flowtypePlugin);
+fixupFlowtypePlugin.rules = Object.entries(fixupFlowtypePlugin.rules).reduce((acc, [key, rule]) => {
+  return {
+    ...acc,
+    [key]: 'schema' in rule ? {...rule, meta: {...rule.meta, schema: rule.schema}} : rule
+  };
+}, {});
+
+export default [{
   'globals': {
     '$Abstract': true,
     '$All': true,
@@ -20,7 +32,7 @@ module.exports = {
     'ReactComponent': true,
     'ReactElement': true
   },
-  'plugins': ['flowtype', 'import'],
+  'plugins': {'flowtype': fixupFlowtypePlugin, 'import': importPlugin},
   'rules': {
     // 関数の括弧まわりの改行スタイル
     // https://eslint.org/docs/rules/function-paren-newline
@@ -108,4 +120,4 @@ module.exports = {
       'onlyFilesWithFlowAnnotation': true
     }
   }
-};
+}];

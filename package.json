@@ -30,6 +30,7 @@
     "test": "bash test.sh"
   },
   "dependencies": {
+    "@eslint/compat": "^1.2.7",
     "globals": "^15.15.0"
   },
   "devDependencies": {
