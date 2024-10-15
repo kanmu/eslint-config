@@ -1,11 +1,12 @@
-var extend = require('extend');
-var base = require('./');
+import baseConfig from './index.js';
 
-module.exports = extend(true, {}, base, {
-  'parserOptions': {
+export default [
+  ...baseConfig,
+  {
+  'languageOptions': {
+    'ecmaVersion': 5,
     'sourceType': 'script'
   },
-  'env': {'es6': false},
 
   'rules': {
     /**
@@ -134,4 +135,4 @@ module.exports = extend(true, {}, base, {
     // http://eslint.org/docs/rules/yield-star-spacing
     'yield-star-spacing': 0
   }
-});
+}];
