@@ -19,5 +19,6 @@
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-react-native": "^4.0.0"
   },
-  "private": true
+  "private": true,
+  "type": "module"
 }
