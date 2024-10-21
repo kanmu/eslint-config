@@ -14,12 +14,12 @@ npm install --save-dev eslint eslint-config-kanmu
 
 ## Usage
 
-Add `.eslintrc` (YAML).
+Add `eslint.config.js` (or `eslint.config.mjs`).
 
 ### Summary
 
 - **Base**
-  - `kanmu`: ES2015
+  - `kanmu`: Default
   - `kanmu/es5`: ES5
 - **Optional**
   - `kanmu/browser`: Browser env
@@ -32,29 +32,39 @@ Add `.eslintrc` (YAML).
 
 ### Examples
 
-#### ES6 (Node.js)
+#### Node.js
 
-```yaml
-extends:
-  - kanmu
-  - kanmu/node
+```js
+import configKanmu from 'eslint-config-kanmu';
+import configKanmuNode from 'eslint-config-kanmu/node';
+export default [
+  ...configKanmu,
+  ...configKanmuNode,
+];
 ```
 
 #### ES5 (Browser)
 
-```yaml
-extends:
-  - kanmu/es5
-  - kanmu/browser
+```js
+import configKanmuEs5 from 'eslint-config-kanmu/es5';
+import configKanmuBrowser from 'eslint-config-kanmu/browser';
+export default [
+  ...configKanmuEs5,
+  ...configKanmuBrowser,
+];
 ```
 
 #### React
 
-```yaml
-extends:
-  - kanmu
-  - kanmu/browser
-  - kanmu/react
+```js
+import configKanmu from 'eslint-config-kanmu';
+import configKanmuBrowser from 'eslint-config-kanmu/browser';
+import configKanmuReact from 'eslint-config-kanmu/react';
+export default [
+  ...configKanmu,
+  ...configKanmuBrowser,
+  ...configKanmuReact,
+];
 ```
 
 ##### Additional Requirements
@@ -65,10 +75,13 @@ npm install --save-dev eslint-plugin-react
 
 #### React Native
 
-```yaml
-extends:
-  - kanmu
-  - kanmu/react-native
+```js
+import configKanmu from 'eslint-config-kanmu';
+import configKanmuReactNative from 'eslint-config-kanmu/react-native';
+export default [
+  ...configKanmu,
+  ...configKanmuReactNative,
+];
 ```
 
 ##### Additional Requirements
@@ -80,12 +93,17 @@ npm install --save-dev eslint-plugin-react eslint-plugin-react-native
 
 #### React Native with Flow
 
-```yaml
-extends:
-  - kanmu
-  - kanmu/react-native
-  - kanmu/flow
-  - kanmu/flow-jsdoc
+```js
+import configKanmu from 'eslint-config-kanmu';
+import configKanmuReactNative from 'eslint-config-kanmu/react-native';
+import configKanmuFlow from 'eslint-config-kanmu/flow';
+import configKanmuFlowJsdoc from 'eslint-config-kanmu/flow-jsdoc';
+export default [
+  ...configKanmu,
+  ...configKanmuReactNative,
+  ...configKanmuFlow,
+  ...configKanmuFlowJsdoc,
+];
 ```
 
 ##### Additional Requirements
