@@ -18,7 +18,7 @@
     "test": "bash test.sh"
   },
   "dependencies": {
-    "extend": "^3.0.1"
+    "globals": "^15.15.0"
   },
   "devDependencies": {
     "eslint": "^9.21.0",
