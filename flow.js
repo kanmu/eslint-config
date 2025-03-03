@@ -6,37 +6,37 @@ const fixupFlowtypePlugin = fixupPluginRules(flowtypePlugin);
 fixupFlowtypePlugin.rules = Object.entries(fixupFlowtypePlugin.rules).reduce((acc, [key, rule]) => {
   return {
     ...acc,
-    [key]: 'schema' in rule ? {...rule, meta: {...rule.meta, schema: rule.schema}} : rule
+    [key]: 'schema' in rule ? {...rule, meta: {...rule.meta, schema: rule.schema}} : rule,
   };
 }, {});
 
 export default [{
-  'globals': {
-    '$Abstract': true,
-    '$All': true,
-    '$Diff': true,
-    '$Enum': true,
-    '$Either': true,
-    '$Exact': true,
-    '$Exports': true,
-    '$Keys': true,
-    '$NonMaybeType': true,
-    '$PropertyType': true,
-    '$Shape': true,
-    '$Subtype': true,
-    '$Supertype': true,
-    '$Tuple': true,
-    '$Type': true,
-    'Class': true,
-    'ReactClass': true,
-    'ReactComponent': true,
-    'ReactElement': true
+  globals: {
+    $Abstract: true,
+    $All: true,
+    $Diff: true,
+    $Enum: true,
+    $Either: true,
+    $Exact: true,
+    $Exports: true,
+    $Keys: true,
+    $NonMaybeType: true,
+    $PropertyType: true,
+    $Shape: true,
+    $Subtype: true,
+    $Supertype: true,
+    $Tuple: true,
+    $Type: true,
+    Class: true,
+    ReactClass: true,
+    ReactComponent: true,
+    ReactElement: true,
   },
-  'plugins': {'flowtype': fixupFlowtypePlugin, 'import': importPlugin},
-  'rules': {
+  plugins: {flowtype: fixupFlowtypePlugin, 'import': importPlugin},
+  rules: {
     // 関数の括弧まわりの改行スタイル
     // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': [2, 'consistent'],  // 引数の型を含めると可読性のため引数1つでも改行したくなる場合がある
+    'function-paren-newline': [2, 'consistent'], // 引数の型を含めると可読性のため引数1つでも改行したくなる場合がある
 
     // flowの`import type {..} form './foo'`を考慮してくれる
     'no-duplicate-imports': 0,
@@ -62,7 +62,7 @@ export default [{
     'flowtype/no-dupe-keys': 2,
     // Array, []の使用禁止 ($ReadOnlyArrayを強制)
     // https://github.com/gajus/eslint-plugin-flowtype#no-mutable-array
-    'flowtype/no-mutable-array': 0,  // 書くのとかつらそう
+    'flowtype/no-mutable-array': 0, // 書くのとかつらそう
     // プリミティブ型のconstructorを型として使用禁止
     // https://github.com/gajus/eslint-plugin-flowtype#no-primitive-constructor-types
     'flowtype/no-primitive-constructor-types': 2,
@@ -74,22 +74,22 @@ export default [{
     'flowtype/no-unused-expressions': 2,
     // 逃げの型を禁止
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/no-weak-types': 0,  // 逃げたいときはある
+    'flowtype/no-weak-types': 0, // 逃げたいときはある
     // オブジェクト属性の区切り記号
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/object-type-delimiter': [2, 'comma'],
     // 引数の型付けを強制
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/require-parameter-type': 0,  // flow側にまかせたいときがある
+    'flowtype/require-parameter-type': 0, // flow側にまかせたいときがある
     // 戻り値の型付けを強制
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/require-return-type': 0,  // flow側にまかせたいときがある
+    'flowtype/require-return-type': 0, // flow側にまかせたいときがある
     // flow annotationを強制
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/require-valid-file-annotation': [2, 'always'],
     // 変数の型付けを強制
     // https://github.com/gajus/eslint-plugin-flowtype#require-variable-type
-    'flowtype/require-variable-type': 0,  // flow側にまかせたいときがある
+    'flowtype/require-variable-type': 0, // flow側にまかせたいときがある
     // セミコロンのスタイル
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/semi': [2, 'always'],
@@ -113,11 +113,11 @@ export default [{
     'flowtype/union-intersection-spacing': [2, 'always'],
     // type aliasを使用したものと解釈
     // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/use-flow-type': 2
+    'flowtype/use-flow-type': 2,
   },
-  'settings': {
-    'flowtype': {
-      'onlyFilesWithFlowAnnotation': true
-    }
-  }
+  settings: {
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true,
+    },
+  },
 }];

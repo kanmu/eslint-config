@@ -1,8 +1,8 @@
 import globals from 'globals';
 
 export default [{
-  'languageOptions': {
-    'globals': globals.browser,
-    'sourceType': 'commonjs'
-  }
+  languageOptions: {
+    globals: globals.browser,
+    sourceType: 'commonjs',
+  },
 }];

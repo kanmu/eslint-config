@@ -2,11 +2,11 @@ import globals from 'globals';
 import nodePlugin from 'eslint-plugin-n';
 
 export default [{
-  'languageOptions': {
-    'globals': globals.node
+  languageOptions: {
+    globals: globals.node,
   },
-  'plugins': {'n': nodePlugin},
-  'rules': {
+  plugins: {n: nodePlugin},
+  rules: {
     // callback の return 強制
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/callback-return.md
     'n/callback-return': 2,
@@ -30,7 +30,7 @@ export default [{
     'n/no-missing-require': 2,
     // require 内のモジュール形式 / 通常変数の混在禁止
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-mixed-requires.md
-    'n/no-mixed-requires': [2, {'grouping': true}],
+    'n/no-mixed-requires': [2, {grouping: true}],
     // new require の禁止
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-new-require.md
     'n/no-new-require': 2,
@@ -66,6 +66,6 @@ export default [{
     'n/no-unsupported-features/node-builtins': 2,
     // shebangが不正に利用されていた場合警告
     // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/shebang.md
-    'n/shebang': 2
-  }
+    'n/shebang': 2,
+  },
 }];

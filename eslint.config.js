@@ -9,7 +9,7 @@ export default [
       // マジックナンバーはルール設定上頻出するので許容する
       'no-magic-numbers': 0,
       // ルールの整列方針が定まっておらず、旧記法を引き継ぐために一時的に無効化する
-      'sort-keys': 0
+      'sort-keys': 0,
     },
     settings: {
       n: {
@@ -20,9 +20,10 @@ export default [
           'eslint-plugin-jsdoc',
           'eslint-plugin-n',
           'eslint-plugin-react',
-          'eslint-plugin-react-native'
-        ]
-      }
-    }
-  }
+          'eslint-plugin-react-hooks',
+          'eslint-plugin-react-native',
+        ],
+      },
+    },
+  },
 ];
