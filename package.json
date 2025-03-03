@@ -27,6 +27,7 @@
     "es5.js"
   ],
   "scripts": {
+    "lint": "eslint",
     "test": "bash test.sh"
   },
   "dependencies": {

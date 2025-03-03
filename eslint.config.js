@@ -14,6 +14,7 @@ export default [
     settings: {
       n: {
         allowModules: [
+          'eslint-config-kanmu',
           'eslint-plugin-flowtype',
           'eslint-plugin-import',
           'eslint-plugin-jsdoc',
