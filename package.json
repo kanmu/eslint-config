@@ -3,6 +3,18 @@
   "version": "15.0.0",
   "description": "ESLint configurations for Kanmu.",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./browser": "./browser.js",
+    "./cli": "./cli.js",
+    "./es5": "./es5.js",
+    "./flow": "./flow.js",
+    "./flow-jsdoc": "./flow-jsdoc.js",
+    "./mocha": "./mocha.js",
+    "./node": "./node.js",
+    "./react": "./react.js",
+    "./react-native": "./react-native.js"
+  },
   "files": [
     "index.js",
     "browser.js",
@@ -15,24 +27,27 @@
     "es5.js"
   ],
   "scripts": {
+    "lint": "eslint",
     "test": "bash test.sh"
   },
   "dependencies": {
-    "extend": "^3.0.1"
+    "@eslint/compat": "^1.2.7",
+    "globals": "^15.15.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0",
-    "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsdoc": "^43.0.7",
-    "eslint-plugin-react": "^7.5.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-react-native": "^4.0.0"
+    "eslint": "^9.21.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-n": "^17.16.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-native": "^5.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.23.0",
-    "eslint-plugin-jsdoc": ">=42.0.0",
-    "eslint-plugin-node": ">=11.1.0"
+    "eslint": "^9.21.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-n": "^17.16.1"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-node": {
@@ -52,5 +67,6 @@
   "bugs": {
     "url": "https://github.com/kanmu/eslint-config/issues"
   },
-  "homepage": "https://github.com/kanmu/eslint-config#readme"
+  "homepage": "https://github.com/kanmu/eslint-config#readme",
+  "type": "module"
 }
